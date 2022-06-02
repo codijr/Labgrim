@@ -1,0 +1,75 @@
+:root {
+    --news-color: #0086C3;
+    --production-color: #ECB340;
+    --schedule-color: #A92618;
+    --members-color: #2D7564;
+    --about-color: #FF7C93;
+    --background-gray-color: #DADADA;
+    --background-white-color: #FFFFFF;
+    --text-black-color: #000000;
+    --text-white-color: #FFFFFF;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: bariol;
+    src: url('../fonts/bariol_bold-webfont.ttf') format('ttf'),
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: bariol;
+    font-weight: 700;
+    /* line-height: 60%; */
+    letter-spacing: 1px;
+}
+
+h1 {
+    font-size: 41px;
+}
+
+h2 {
+    font-size: 37px;
+}
+
+h3 {
+    font-size: 37px;
+}
+
+h4 {
+    font-size: 23px;
+}
+
+h5 {
+    font-size: 16px;
+}
+
+h6 {
+    font-size: 14px;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 0;
+    font-weight: 400;
+}
+
+p.body {
+    font-size: 15px;
+}
+
+p.body-2 {
+    font-size: 12px;
+}
+
+button {
+    font-size: 14px;
+}
+
+p.tag {
+    font-size: 9px;
+}
