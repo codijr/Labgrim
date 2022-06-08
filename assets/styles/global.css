@@ -17,15 +17,23 @@
 }
 
 @font-face {
-    font-family: bariol;
-    src: url('../fonts/bariol_bold-webfont.ttf') format('ttf'),
+    font-family: 'Bariol Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Bariol Bold'), url('../fonts/bariol_bold-webfont.woff') format('woff');
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: bariol;
+    font-family: 'Bariol Bold';
     font-weight: 700;
-    /* line-height: 60%; */
+    font-style: normal;
     letter-spacing: 1px;
+    margin-bottom: 0;
+    color: var(--text-black-color);
+}
+
+body {
+    background-color: var(--background-gray-color);
 }
 
 h1 {
@@ -41,7 +49,7 @@ h3 {
 }
 
 h4 {
-    font-size: 23px;
+    font-size: 20px;
 }
 
 h5 {
@@ -72,4 +80,24 @@ button {
 
 p.tag {
     font-size: 9px;
+}
+
+.bg-news {
+    background-color: var(--news-color);
+}
+
+.bg-production {
+    background-color: var(--production-color);
+}
+
+.bg-schedule {
+    background-color: var(--schedule-color);
+}
+
+.bg-members {
+    background-color: var(--members-color);
+}
+
+.bg-about {
+    background-color: var(--about-color);
 }
