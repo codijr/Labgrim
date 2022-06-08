@@ -1,1 +1,42 @@
-/* No CSS *//*# sourceMappingURL=footer.css.map */
+footer {
+  background-color: var(--background-white-color);
+}
+
+footer .container #footer-info #contact #social div {
+  width: 35px;
+  height: 35px;
+  border: 1px solid black;
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
+}
+
+footer .container #footer-info #contact #social div svg path {
+  fill: black;
+}
+
+footer .container #footer-info #contact #social div:hover {
+  cursor: pointer;
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
+}
+
+footer .container #footer-info #contact #social div:hover svg path {
+  fill: white;
+}
+
+footer .container #footer-info #contact #social #facebook svg {
+  width: 25%;
+}
+
+footer .container #footer-info #contact #social #instagram svg {
+  width: 50%;
+}
+
+footer .container #footer-info #contact #social #facebook:hover {
+  background-color: #1877f2;
+}
+
+footer .container #footer-info #contact #social #instagram:hover {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+/*# sourceMappingURL=footer.css.map */

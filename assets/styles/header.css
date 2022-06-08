@@ -114,6 +114,8 @@ header#desktop-header {
   height: 100vh;
   max-width: 300px;
   background-color: var(--background-white-color);
+  top: 0;
+  left: 0;
 }
 
 header#desktop-header nav ul.navbar-nav li:not(.active):hover {
@@ -122,5 +124,11 @@ header#desktop-header nav ul.navbar-nav li:not(.active):hover {
 
 header#desktop-header nav ul.navbar-nav li.active h4 {
   color: var(--text-white-color);
+}
+
+@media (min-width: 992px) {
+  #content {
+    float: right;
+  }
 }
 /*# sourceMappingURL=header.css.map */
