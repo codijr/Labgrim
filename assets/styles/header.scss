@@ -110,6 +110,10 @@ header#desktop-header {
     height: 100vh;
     max-width: 300px;
     background-color: var(--background-white-color);
+    // position: fixed;
+    // float: left;
+    top: 0;
+    left: 0;
 
     nav {
         ul.navbar-nav {
@@ -123,5 +127,11 @@ header#desktop-header {
                 }
             }
         }
+    }
+}
+
+@media (min-width: 992px) {
+    #content {
+        float: right;
     }
 }
