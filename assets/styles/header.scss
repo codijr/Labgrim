@@ -1,0 +1,127 @@
+#background-menu {
+    background-color: rgba(0, 0, 0, 0.842);
+    display: none;
+} 
+
+header#mobile-header {
+    background-color: var(--background-white-color);
+    border-bottom: 1px solid black;
+    z-index: 3;
+
+    nav {
+        background-color: var(--background-white-color);
+        
+        .container {
+            height: 10vh;
+
+            .navbar-toggler {
+                width: 10%;
+
+                span.hamburguer {
+                    display: block;
+                    background-color: var(--text-black-color);
+                    width: 25px;
+                    height: 2px;
+                    position: relative;
+                    transition: .5s ease-in-out;
+                }
+
+                .hamburguer::before,
+                .hamburguer::after {
+                    background-color: var(--text-black-color);
+                    content: '';
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    transition: .5s ease-in-out;
+                }
+
+                .hamburguer::before {
+                    top: -8px;
+                }
+
+                .hamburguer::after {
+                    bottom: -8px;
+                }
+
+                input {
+                    display: none;
+                }
+
+                input:checked ~ label .hamburguer{
+                    transform: rotate(45deg);
+                }
+
+                input:checked ~ label .hamburguer:before{
+                    transform: rotate(90deg);
+                    top: 0;
+                }
+
+                input:checked ~ label .hamburguer:after{
+                    transform: rotate(90deg);
+                    bottom: 0;
+                }
+            }
+
+            .navbar-brand {
+                width: 30%;
+            }
+
+            .navbar-collapse {
+                position: fixed;
+                top: 10vh;
+                left: 0;
+                width: 75%;
+                height: 90vh;
+                background-color: var(--background-white-color);
+                transition: left 200ms ease-in-out;
+
+                ul.navbar-nav {
+                    li:not(.active):hover {
+                        background-color: rgba(201, 201, 201, 0.178);
+                    }
+
+                    li.active {
+                        h4 {
+                            color: var(--text-white-color);
+                        }
+                    }
+                }
+            }
+
+            .navbar-collapse.collapsing {
+                left: -75%;
+            }
+
+            .navbar-collapse.show {
+                left: 0;
+                transition: left 200ms ease-in-out;
+            }
+
+            .navbar-toggler.collapsed ~ .navbar-collapse {
+                transition: left 500ms ease-in-out;
+            }
+        }
+    }
+}
+
+header#desktop-header {
+    height: 100vh;
+    max-width: 300px;
+    background-color: var(--background-white-color);
+
+    nav {
+        ul.navbar-nav {
+            li:not(.active):hover {
+                background-color: rgba(201, 201, 201, 0.178);
+            }
+
+            li.active {
+                h4 {
+                    color: var(--text-white-color);
+                }
+            }
+        }
+    }
+}
