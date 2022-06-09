@@ -28,17 +28,17 @@
                 <div class="row">
                     <div class="col-12 col-lg-4 d-flex flex-column align-items-center">
                         <p class="tag mb-2 text-news">Notícia</p>
-                        <h5 class="text-center">A adoção responsável pode fazer uma enorme diferença na vida de crianças e adolescentes</h5>
+                        <a href="#"><h5 class="text-center">A adoção responsável pode fazer uma enorme diferença na vida de crianças e adolescentes</h5></a>
                     </div>
 
                     <div class="col-12 col-lg-4 d-flex flex-column align-items-center">
                         <p class="tag mb-2 text-news">Notícia</p>
-                        <h5 class="text-center">A adoção responsável pode fazer uma enorme diferença na vida de crianças e adolescentes</h5>
+                        <a href="#"><h5 class="text-center">A adoção responsável pode fazer uma enorme diferença na vida de crianças e adolescentes</h5></a>
                     </div>
 
                     <div class="col-12 col-lg-4 d-flex flex-column align-items-center">
                         <p class="tag mb-2 text-news">Notícia</p>
-                        <h5 class="text-center">A adoção responsável pode fazer uma enorme diferença na vida de crianças e adolescentes</h5>
+                        <a href="#"><h5 class="text-center">A adoção responsável pode fazer uma enorme diferença na vida de crianças e adolescentes</h5></a>
                     </div>
                 </div>
             </div>

@@ -113,6 +113,17 @@ main #other-news #background {
   border-radius: 20px;
 }
 
+main #other-news #background a h5 {
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
+}
+
+main #other-news #background a:hover h5 {
+  color: var(--news-color);
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
+}
+
 main #content-home aside #list-schedule .card-schedule-home + .card-schedule-home {
   border-top: 1px solid #C4C4C4;
   padding-top: 10px;
