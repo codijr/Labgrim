@@ -129,6 +129,10 @@ main #content-home {
   top: -40px;
 }
 
+main #content-home section #list-production .card-production {
+  height: 450px;
+}
+
 main #content-home aside #list-schedule .card-schedule-home + .card-schedule-home {
   border-top: 1px solid #C4C4C4;
   padding-top: 10px;

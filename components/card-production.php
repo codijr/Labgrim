@@ -7,8 +7,13 @@
         </button>
 
         <div class="card-info bg-white px-3 py-2">
-            <h3 class="text-production"><?php echo $title ?></h3>
-            <p class="body"><?php echo $subtitle ?></p>
+            <?php if(is_front_page()) : ?>
+                <h3 class="text-production"><?php echo $title ?></h3>
+                <p class="body"><?php echo mb_strimwidth($subtitle, 0, 150, "..."); ?></p>
+            <?php else : ?>
+                <h4 class="text-production"><?php echo $title ?></h4>
+                <p class="body-2"><?php echo mb_strimwidth($subtitle, 0, 75, "..."); ?></p>
+            <?php endif; ?>
         </div>
     </div>
 </div>

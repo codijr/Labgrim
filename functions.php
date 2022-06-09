@@ -39,6 +39,10 @@
         if(is_page('noticias')) {
             wp_enqueue_style('noticias', get_template_directory_uri().'/assets/styles/page-noticias.css', array(),'1.0.0', 'all');
         }
+
+        if(is_page('producoes')) {
+            wp_enqueue_style('producoes', get_template_directory_uri().'/assets/styles/page-producoes.css', array(),'1.0.0', 'all');
+        }
     }
     add_action('wp_enqueue_scripts', 'css_files');
 
