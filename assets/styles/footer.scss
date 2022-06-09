@@ -14,17 +14,20 @@ footer {
                         svg {
                             path {
                                 fill: black;
+                                transition-duration: 500ms;
                             }
                         }
                     }
 
                     div:hover {
                         cursor: pointer;
+                        border: 1px solid white;
                         transition-duration: 500ms;
 
                         svg {
                             path {
                                 fill: white;
+                                transition-duration: 500ms;
                             }
                         }
                     }
