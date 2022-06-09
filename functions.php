@@ -29,6 +29,7 @@
         //components
         wp_enqueue_style('card-production', get_template_directory_uri().'/assets/styles/components/card-production.css', array(),'1.0.0', 'all');
         wp_enqueue_style('card-news', get_template_directory_uri().'/assets/styles/components/card-news.css', array(),'1.0.0', 'all');
+        wp_enqueue_style('card-schedule', get_template_directory_uri().'/assets/styles/components/card-schedule.css', array(),'1.0.0', 'all');
         wp_enqueue_style('card-schedule-home', get_template_directory_uri().'/assets/styles/components/card-schedule-home.css', array(),'1.0.0', 'all');
 
         //pages styles
@@ -42,6 +43,10 @@
 
         if(is_page('producoes')) {
             wp_enqueue_style('producoes', get_template_directory_uri().'/assets/styles/page-producoes.css', array(),'1.0.0', 'all');
+        }
+
+        if(is_page('agenda')) {
+            wp_enqueue_style('agenda', get_template_directory_uri().'/assets/styles/page-agenda.css', array(),'1.0.0', 'all');
         }
     }
     add_action('wp_enqueue_scripts', 'css_files');
