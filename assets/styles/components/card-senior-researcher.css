@@ -1,0 +1,24 @@
+.card-senior-researcher {
+  border-radius: 10px;
+}
+
+.card-senior-researcher #background-detail {
+  width: 10%;
+  height: 100%;
+  left: 0;
+  background-color: var(--members-color);
+}
+
+.card-senior-researcher #content #thumb {
+  width: 50%;
+  height: 100%;
+}
+
+.card-senior-researcher #content #thumb img {
+  width: 140px;
+  height: 140px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+/*# sourceMappingURL=card-senior-researcher.css.map */
