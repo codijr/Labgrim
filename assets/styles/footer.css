@@ -12,16 +12,21 @@ footer .container #footer-info #contact #social div {
 
 footer .container #footer-info #contact #social div svg path {
   fill: black;
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
 }
 
 footer .container #footer-info #contact #social div:hover {
   cursor: pointer;
+  border: 1px solid white;
   -webkit-transition-duration: 500ms;
           transition-duration: 500ms;
 }
 
 footer .container #footer-info #contact #social div:hover svg path {
   fill: white;
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
 }
 
 footer .container #footer-info #contact #social #facebook svg {

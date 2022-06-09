@@ -1,0 +1,28 @@
+.card-production {
+  width: 100%;
+  height: 450px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card-production img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
+}
+
+.card-production:hover {
+  cursor: pointer;
+}
+
+.card-production:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
+}
+/*# sourceMappingURL=card-production.css.map */

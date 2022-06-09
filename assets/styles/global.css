@@ -53,11 +53,15 @@ h4 {
 }
 
 h5 {
-    font-size: 16px;
+    font-size: 18px;
 }
 
 h6 {
     font-size: 14px;
+}
+
+a {
+    text-decoration: none;
 }
 
 p {
@@ -75,11 +79,17 @@ p.body-2 {
 }
 
 button {
-    font-size: 14px;
+    border: 0;
+    border-radius: 4px;
+    padding: 3px 5px;
+}
+
+button:hover {
+    filter: brightness(0.9);
 }
 
 p.tag {
-    font-size: 9px;
+    font-size: 12px;
 }
 
 .bg-news {
@@ -100,4 +110,32 @@ p.tag {
 
 .bg-about {
     background-color: var(--about-color);
+}
+
+.text-white {
+    color: var(--text-white-color) !important;
+}
+
+.text-black {
+    color: var(--text-black-color);
+}
+
+.text-news {
+    color: var(--news-color);
+}
+
+.text-production {
+    color: var(--production-color);
+}
+
+.text-schedule {
+    color: var(--schedule-color);
+}
+
+.text-members {
+    color: var(--members-color);
+}
+
+.text-about {
+    color: var(--about-color);
 }
