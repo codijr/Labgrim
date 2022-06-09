@@ -124,6 +124,11 @@ main #other-news #background a:hover h5 {
           transition-duration: 500ms;
 }
 
+main #content-home {
+  position: relative;
+  top: -40px;
+}
+
 main #content-home aside #list-schedule .card-schedule-home + .card-schedule-home {
   border-top: 1px solid #C4C4C4;
   padding-top: 10px;

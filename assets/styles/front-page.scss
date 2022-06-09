@@ -123,6 +123,9 @@ main {
     }
 
     #content-home {
+        position: relative;
+        top: -40px;
+
         aside {
             #list-schedule {
                 .card-schedule-home + .card-schedule-home {
