@@ -5,7 +5,7 @@ main {
         background-image: url('../icons/background-pattern.svg');
         background-repeat: no-repeat;
         background-position: center;
- 
+
         form {
             width: 60%;
 
@@ -22,7 +22,7 @@ main {
                 }
 
                 input:focus {
-                    color: var(--production-color);
+                    color: var(--schedule-color);
                 }
 
                 input[type="search"]::-webkit-search-decoration,
@@ -52,12 +52,8 @@ main {
         }
     }
 
-    #list-productions {
+    #list-agenda {
         position: relative;
         top: -60px;
-
-        .card-production {
-            height: 300px;
-        }
     }
 }
