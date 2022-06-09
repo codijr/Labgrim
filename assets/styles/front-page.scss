@@ -108,4 +108,15 @@ main {
             border-radius: 20px;
         }
     }
+
+    #content-home {
+        aside {
+            #list-schedule {
+                .card-schedule-home + .card-schedule-home {
+                    border-top: 1px solid #C4C4C4;
+                    padding-top: 10px;
+                }
+            }
+        }
+    }
 }

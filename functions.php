@@ -27,7 +27,8 @@
         wp_enqueue_style('footer', get_template_directory_uri().'/assets/styles/footer.css', array(),'1.0.0', 'all');
 
         //components
-        wp_enqueue_style('cardProduction', get_template_directory_uri().'/assets/styles/components/card-production.css', array(),'1.0.0', 'all');
+        wp_enqueue_style('card-production', get_template_directory_uri().'/assets/styles/components/card-production.css', array(),'1.0.0', 'all');
+        wp_enqueue_style('card-schedule-home', get_template_directory_uri().'/assets/styles/components/card-schedule-home.css', array(),'1.0.0', 'all');
 
         //pages styles
         if(is_front_page()) {
