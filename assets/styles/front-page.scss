@@ -126,6 +126,14 @@ main {
         position: relative;
         top: -40px;
 
+        section {
+            #list-production {
+                .card-production {
+                    height: 450px;
+                }
+            }
+        }
+
         aside {
             #list-schedule {
                 .card-schedule-home + .card-schedule-home {

@@ -1,0 +1,60 @@
+main #search-field {
+  padding-top: 40px;
+  padding-bottom: 120px;
+  background-image: url("../icons/background-pattern.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+main #search-field form {
+  width: 60%;
+}
+
+main #search-field form div {
+  height: 50px;
+  border-radius: 50px;
+  padding: 5px 10px;
+  background-color: white;
+}
+
+main #search-field form div input {
+  height: 100%;
+  border: 0;
+  outline: none;
+}
+
+main #search-field form div input:focus {
+  color: var(--production-color);
+}
+
+main #search-field form div input[type="search"]::-webkit-search-decoration,
+main #search-field form div input[type="search"]::-webkit-search-cancel-button,
+main #search-field form div input[type="search"]::-webkit-search-results-button,
+main #search-field form div input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+main #search-field form div button {
+  background-color: transparent;
+}
+
+main #search-field #filters select {
+  height: 35px;
+  border-radius: 30px;
+  padding: 0 10px;
+  border: 0;
+}
+
+main #search-field #filters select option {
+  background: transparent;
+}
+
+main #list-productions {
+  position: relative;
+  top: -60px;
+}
+
+main #list-productions .card-production {
+  height: 300px;
+}
+/*# sourceMappingURL=page-producoes.css.map */
