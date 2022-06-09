@@ -25,7 +25,7 @@
                             </label>
                         </button>
 
-                        <a class="navbar-brand me-0" href="#">
+                        <a class="navbar-brand me-0" href="<?php echo get_home_url(); ?>">
                             <img class="w-100" src="<?php echo get_template_directory_uri(); ?>/assets/icons/logo.png" alt="Labgrim logo">
                         </a>
                     </div>
