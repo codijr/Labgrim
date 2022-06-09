@@ -75,7 +75,13 @@ p.body-2 {
 }
 
 button {
-    font-size: 14px;
+    border: 0;
+    border-radius: 4px;
+    padding: 3px 5px;
+}
+
+button:hover {
+    filter: brightness(0.9);
 }
 
 p.tag {

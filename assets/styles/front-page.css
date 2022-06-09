@@ -24,16 +24,10 @@ main #banner .filter {
 
 main #banner #info {
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  -webkit-transform: translateY(-75%);
+          transform: translateY(-75%);
   -webkit-transition-duration: 500ms;
           transition-duration: 500ms;
-}
-
-main #banner #info button {
-  border: 0;
-  border-radius: 4px;
-  padding: 3px 5px;
 }
 
 main #banner #pattern-group {
@@ -108,5 +102,14 @@ main #banner:hover #pattern-group #circle-1 {
 
 main #banner:hover #pattern-group #x-3 {
   top: 55%;
+}
+
+main #other-news {
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+main #other-news #background {
+  border-radius: 20px;
 }
 /*# sourceMappingURL=front-page.css.map */
