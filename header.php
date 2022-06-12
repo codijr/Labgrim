@@ -26,7 +26,7 @@
                         </button>
 
                         <a class="navbar-brand me-0" href="<?php echo get_home_url(); ?>">
-                            <img class="w-100" src="<?php echo get_template_directory_uri(); ?>/assets/icons/logo.png" alt="Labgrim logo">
+                            <img class="w-100" src="<?php echo get_template_directory_uri(); ?>/assets/icons/logo.svg" alt="Labgrim logo">
                         </a>
                     </div>
 
@@ -90,7 +90,7 @@
         <header class="d-none d-lg-block w-25 vh-100" id="desktop-header">
             <nav class="h-100">
                 <a class="navbar-brand me-0 h-25" href="<?php echo get_home_url(); ?>">
-                    <img class="w-100 my-5 px-4" src="<?php echo get_template_directory_uri(); ?>/assets/icons/logo.png" alt="Labgrim logo">
+                    <img class="w-100 my-5 px-4" src="<?php echo get_template_directory_uri(); ?>/assets/icons/logo.svg" alt="Labgrim logo">
                 </a>
 
                 <div class="pb-5 d-flex flex-column justify-content-between align-items-start h-75" >
