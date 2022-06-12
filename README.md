@@ -1,8 +1,8 @@
 <h1 align="center">
-<img src="./assets/icons/logo.png"/>
+<img src="./assets/icons/logo.svg"/>
 </h1>
 
-<p align="center"><b>👦🏻 Wordpress theme developed for Labgrim, a Relationship, Childhood, Youth and Media Research Laboratory</b>
+<p align="center"><b>👦🏻 Wordpress theme developed for Labgrim, a Relationship, Childhood, Youth and Media Research Laboratory</b></p>
 <ul align="center">
     <img src="https://img.shields.io/static/v1?label=Status&message=10%&labelColor=%2306121f&style=flat-square&color=%23fc0303">
     <img src="https://img.shields.io/static/v1?label=License&message=GPL-3.0&labelColor=%2306121f&style=flat-square&color=%23e60000">
