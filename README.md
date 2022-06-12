@@ -4,7 +4,7 @@
 
 <p align="center"><b>👦🏻 Wordpress theme developed for Labgrim, a Relationship, Childhood, Youth and Media Research Laboratory</b></p>
 <ul align="center">
-    <img src="https://img.shields.io/static/v1?label=Status&message=10%&labelColor=%2306121f&style=flat-square&color=%23fc0303">
+    <img src="https://img.shields.io/static/v1?label=Status&message=70%&labelColor=%2306121f&style=flat-square&color=%2393f542">
     <img src="https://img.shields.io/static/v1?label=License&message=GPL-3.0&labelColor=%2306121f&style=flat-square&color=%23e60000">
 </ul>
 
