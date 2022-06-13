@@ -1,10 +1,10 @@
-<div class="card-senior-researcher w-100 d-flex bg-white py-3 mb-3">
+<div class="card-senior-researcher w-100 d-flex bg-white mb-3">
     <div class="bg-members" id="background-detail"></div>
-    <div class="d-flex" id="content">
+
+    <div class="d-flex py-3" id="content">
         <div class="d-flex justify-content-center align-items-center" id="thumb">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/test-members.png">
         </div>
-
         <div class="mx-4" id="info">
             <div class="d-flex mb-1">
                 <h3 class="text-members me-4">Georgia da Cruz Pereira</h3>
