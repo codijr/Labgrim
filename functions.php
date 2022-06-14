@@ -31,6 +31,7 @@
         wp_enqueue_style('card-news', get_template_directory_uri().'/assets/styles/components/card-news.css', array(),'1.0.0', 'all');
         wp_enqueue_style('card-schedule', get_template_directory_uri().'/assets/styles/components/card-schedule.css', array(),'1.0.0', 'all');
         wp_enqueue_style('card-senior-researcher', get_template_directory_uri().'/assets/styles/components/card-senior-researcher.css', array(),'1.0.0', 'all');
+        wp_enqueue_style('card-researcher', get_template_directory_uri().'/assets/styles/components/card-researcher.css', array(),'1.0.0', 'all');
         wp_enqueue_style('card-schedule-home', get_template_directory_uri().'/assets/styles/components/card-schedule-home.css', array(),'1.0.0', 'all');
 
         //pages styles
