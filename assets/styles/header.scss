@@ -131,6 +131,11 @@ header#desktop-header {
     }
 }
 
+#content {
+    position: relative;
+    top: 10vh;
+}
+
 @media (min-width: 992px) {
     #content {
         float: right;
