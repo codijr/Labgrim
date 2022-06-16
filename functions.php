@@ -66,6 +66,7 @@
         wp_enqueue_script('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js', array('popper'));
         wp_enqueue_script('bootstrap-select', 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta3/js/bootstrap-select.min.js', array('jquery'));
         wp_enqueue_script('swiper', 'https://unpkg.com/swiper@8/swiper-bundle.min.js');
+        wp_enqueue_script( 'swiperinit', get_template_directory_uri() . '/assets/scripts/swiper-init.js', array(), '8.0.7', true );
 
         wp_enqueue_script('header', get_template_directory_uri() . '/assets/scripts/header.js');
     }

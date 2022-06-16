@@ -25,21 +25,24 @@
     <section class="container" id="other-news">
         <div class="w-100 bg-white" id="background">
             <div class="container py-5">
-                <div class="row">
-                    <div class="col-12 col-lg-4 d-flex flex-column align-items-center">
-                        <p class="tag mb-2 text-news">Notícia</p>
-                        <a href="#"><h5 class="text-center">A adoção responsável pode fazer uma enorme diferença na vida de crianças e adolescentes</h5></a>
-                    </div>
+                <div class="swiper-news">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide text-center px-4">
+                            <p class="tag mb-2 text-news">Notícia</p>
+                            <a href="#"><h5>A adoção responsável pode fazer uma enorme diferença na vida de crianças e adolescentes</h5></a>
+                        </div>
 
-                    <div class="col-12 col-lg-4 d-flex flex-column align-items-center">
-                        <p class="tag mb-2 text-news">Notícia</p>
-                        <a href="#"><h5 class="text-center">A adoção responsável pode fazer uma enorme diferença na vida de crianças e adolescentes</h5></a>
-                    </div>
+                        <div class="swiper-slide text-center px-4">
+                            <p class="tag mb-2 text-news">Notícia</p>
+                            <a href="#"><h5>A arerentes</h5></a>
+                        </div>
 
-                    <div class="col-12 col-lg-4 d-flex flex-column align-items-center">
-                        <p class="tag mb-2 text-news">Notícia</p>
-                        <a href="#"><h5 class="text-center">A adoção responsável pode fazer uma enorme diferença na vida de crianças e adolescentes</h5></a>
+                        <div class="swiper-slide text-center px-4">
+                            <p class="tag mb-2 text-news">Notícia</p>
+                            <a href="#"><h5>A adoção responsáqwerweescentes</h5></a>
+                        </div>
                     </div>
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
         </div>

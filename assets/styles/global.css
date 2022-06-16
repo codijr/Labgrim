@@ -38,27 +38,27 @@ body {
 }
 
 h1 {
-    font-size: 41px;
+    font-size: min(41px, 7vw);
 }
 
 h2 {
-    font-size: 37px;
+    font-size: min(37px, 6vw);
 }
 
 h3 {
-    font-size: 37px;
+    font-size: min(30px, 5vw);
 }
 
 h4 {
-    font-size: 20px;
+    font-size: min(20px, 4vw);
 }
 
 h5 {
-    font-size: 18px;
+    font-size: min(18px, 3.5vw);
 }
 
 h6 {
-    font-size: 14px;
+    font-size: min(14px, 3vw);
 }
 
 a {
@@ -72,11 +72,11 @@ p {
 }
 
 p.body {
-    font-size: 15px;
+    font-size: min(15px, 3vw);
 }
 
 p.body-2 {
-    font-size: 12px;
+    font-size: min(12px, 2.5vw);
 }
 
 button {
@@ -90,7 +90,7 @@ button:hover {
 }
 
 p.tag {
-    font-size: 12px;
+    font-size: min(12px, 2.5vw);
 }
 
 .bg-news {
