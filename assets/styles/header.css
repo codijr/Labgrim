@@ -127,9 +127,14 @@ header#desktop-header nav ul.navbar-nav li.active h4 {
   color: var(--text-white-color);
 }
 
+#content {
+  position: relative;
+  top: 10vh;
+}
+
 @media (min-width: 992px) {
   #content {
-    float: right;
+    top: 0;
   }
 }
 /*# sourceMappingURL=header.css.map */
