@@ -130,6 +130,7 @@ header#desktop-header nav ul.navbar-nav li.active h4 {
 #content {
   position: relative;
   top: 10vh;
+  overflow-x: hidden;
 }
 
 @media (min-width: 992px) {
