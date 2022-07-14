@@ -1,43 +1,45 @@
 <?php get_header(); ?>
 
 <main>
-    <section class="container d-flex flex-column align-items-center justify-content-center bg-production" id="search-field">
-        <form action="">
-            <div class="d-flex align-items-center mb-5" >
-                <input class="w-100" type="search" name="" id="" placeholder="Pesquisar">
-                <button class="d-flex justify-content-center align-items-center" type="submit">
-                    <?php includeFile('assets/icons/search.svg', array()); ?>
-                </button>
-            </div>
-        </form>
-
-        <div class="w-100 d-flex justify-content-start" id="filters">
-            <div class="row w-75">
-                <div class="col-12 col-lg-4">
-                    <select class="w-100" name="" id="">
-                        <option value="">TIPO</option>
-                        <option value="">AUDIOVISUAL</option>
-                        <option value="">ARTIGO</option>
-                    </select>
+    <section class="bg-production" id="search-field">
+        <div class="container  d-flex flex-column align-items-center justify-content-center">
+            <form action="">
+                <div class="d-flex align-items-center mb-5" >
+                    <input class="w-100" type="search" name="" id="" placeholder="Pesquisar">
+                    <button class="d-flex justify-content-center align-items-center" type="submit">
+                        <?php includeFile('assets/icons/search.svg', array()); ?>
+                    </button>
                 </div>
+            </form>
 
-                <div class="col-12 col-lg-4">
-                    <select class="w-100" name="" id="">
-                        <option value="">ASSUNTO</option>
-                        <option value="">INFANCIA</option>
-                        <option value="">JUVENTUDE</option>
-                        <option value="">MÍDIA</option>
-                    </select>
-                </div>
+            <div class="container w-100 d-flex justify-content-center justify-content-xl-start" id="filters">
+                <div class="row w-100 gx-3 gy-3">
+                    <div class="col-12 col-lg-4 px-0">
+                        <select class="w-100 selectpicker" name="" id="">
+                            <option value="">TIPO</option>
+                            <option value="">AUDIOVISUAL</option>
+                            <option value="">ARTIGO</option>
+                        </select>
+                    </div>
 
-                <div class="col-12 col-lg-4">
-                    <select class="w-100" name="" id="">
-                        <option value="">DATA</option>
-                        <option value="">2022</option>
-                        <option value="">2021</option>
-                        <option value="">2020</option>
-                        <option value="">2019</option>
-                    </select>
+                    <div class="col-12 col-lg-4 px-0">
+                        <select class="w-100 selectpicker" name="" id="">
+                            <option value="">ASSUNTO</option>
+                            <option value="">INFANCIA</option>
+                            <option value="">JUVENTUDE</option>
+                            <option value="">MÍDIA</option>
+                        </select>
+                    </div>
+
+                    <div class="col-12 col-lg-4 px-0">
+                        <select class="w-100 selectpicker" name="" id="">
+                            <option value="">DATA</option>
+                            <option value="">2022</option>
+                            <option value="">2021</option>
+                            <option value="">2020</option>
+                            <option value="">2019</option>
+                        </select>
+                    </div>
                 </div>
             </div>
         </div>

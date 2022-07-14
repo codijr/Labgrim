@@ -7,7 +7,7 @@ main #search-field {
 }
 
 main #search-field form {
-  width: 60%;
+  width: 100%;
 }
 
 main #search-field form div {
@@ -41,5 +41,11 @@ main #search-field form div button {
 main #list-news {
   position: relative;
   top: -60px;
+}
+
+@media (min-width: 992px) {
+  main #search-field form {
+    width: 60%;
+  }
 }
 /*# sourceMappingURL=page-noticias.css.map */
