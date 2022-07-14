@@ -7,7 +7,7 @@ main #search-field {
 }
 
 main #search-field form {
-  width: 60%;
+  width: 100%;
 }
 
 main #search-field form div {
@@ -38,8 +38,13 @@ main #search-field form div button {
   background-color: transparent;
 }
 
+main #search-field #filters {
+  width: 100%;
+}
+
 main #search-field #filters select {
   height: 35px;
+  width: 100%;
   border-radius: 30px;
   padding: 0 10px;
   border: 0;
@@ -56,5 +61,14 @@ main #list-productions {
 
 main #list-productions .card-production {
   height: 300px;
+}
+
+@media (min-width: 992px) {
+  main #search-field form {
+    width: 60% !important;
+  }
+  main #search-field #filters .row {
+    width: 75% !important;
+  }
 }
 /*# sourceMappingURL=page-producoes.css.map */

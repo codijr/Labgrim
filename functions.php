@@ -72,6 +72,8 @@
     }
     add_action('wp_enqueue_scripts', 'scripts_files'); 
 
+    require_once(get_template_directory().'/app/cpt/cpt-partners.php');
+
     //função para fazer componentização
     function includeFile($fileName, $variables) {
         extract($variables);

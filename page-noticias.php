@@ -1,20 +1,22 @@
 <?php get_header(); ?>
 
 <main>
-    <section class="container d-flex justify-content-center bg-news" id="search-field">
-        <form action="">
-            <div class="d-flex align-items-center" >
-                <input class="w-100" type="search" name="" id="" placeholder="Pesquisar">
-                <button class="d-flex justify-content-center algin-items-center" type="submit">
-                    <?php includeFile('assets/icons/search.svg', array()); ?>
-                </button>
-            </div>
-        </form>
+    <section class="bg-news" id="search-field">
+        <div class="container d-flex justify-content-center">
+            <form action="">
+                <div class="d-flex align-items-center" >
+                    <input class="w-100" type="search" name="" id="" placeholder="Pesquisar">
+                    <button class="d-flex justify-content-center algin-items-center" type="submit">
+                        <?php includeFile('assets/icons/search.svg', array()); ?>
+                    </button>
+                </div>
+            </form>
+        </div>
     </section>
 
     <section class="container mb-3" id="list-news">
         <div class="row gx-3 gy-3">
-            <div class="col-12 col-lg-4">
+            <div class="col-12 col-lg-6 col-xl-4">
                 <?php includeFile('components/card-news.php', array(
                     'image' => get_template_directory_uri() . '/assets/img/test-production.png',
                     'title' => 'Publicidade Infantil',
@@ -22,7 +24,7 @@
                 )) ?>
             </div>
 
-            <div class="col-12 col-lg-4">
+            <div class="col-12 col-lg-6 col-xl-4">
                 <?php includeFile('components/card-news.php', array(
                     'image' => get_template_directory_uri() . '/assets/img/test-production.png',
                     'title' => 'Publicidade Infantil',
@@ -30,7 +32,7 @@
                 )) ?>
             </div>
 
-            <div class="col-12 col-lg-4">
+            <div class="col-12 col-lg-6 col-xl-4">
                 <?php includeFile('components/card-news.php', array(
                     'image' => get_template_directory_uri() . '/assets/img/test-production.png',
                     'title' => 'Publicidade Infantil',
@@ -38,7 +40,7 @@
                 )) ?>
             </div>
 
-            <div class="col-12 col-lg-4">
+            <div class="col-12 col-lg-6 col-xl-4">
                 <?php includeFile('components/card-news.php', array(
                     'image' => get_template_directory_uri() . '/assets/img/test-production.png',
                     'title' => 'Publicidade Infantil',
@@ -46,7 +48,7 @@
                 )) ?>
             </div>
 
-            <div class="col-12 col-lg-4">
+            <div class="col-12 col-lg-6 col-xl-4">
                 <?php includeFile('components/card-news.php', array(
                     'image' => get_template_directory_uri() . '/assets/img/test-production.png',
                     'title' => 'Publicidade Infantil',
@@ -54,7 +56,7 @@
                 )) ?>
             </div>
 
-            <div class="col-12 col-lg-4">
+            <div class="col-12 col-lg-6 col-xl-4">
                 <?php includeFile('components/card-news.php', array(
                     'image' => get_template_directory_uri() . '/assets/img/test-production.png',
                     'title' => 'Publicidade Infantil',
@@ -62,7 +64,7 @@
                 )) ?>
             </div>
 
-            <div class="col-12 col-lg-4">
+            <div class="col-12 col-lg-6 col-xl-4">
                 <?php includeFile('components/card-news.php', array(
                     'image' => get_template_directory_uri() . '/assets/img/test-production.png',
                     'title' => 'Publicidade Infantil',
@@ -70,7 +72,7 @@
                 )) ?>
             </div>
 
-            <div class="col-12 col-lg-4">
+            <div class="col-12 col-lg-6 col-xl-4">
                 <?php includeFile('components/card-news.php', array(
                     'image' => get_template_directory_uri() . '/assets/img/test-production.png',
                     'title' => 'Publicidade Infantil',
@@ -78,7 +80,7 @@
                 )) ?>
             </div>
 
-            <div class="col-12 col-lg-4">
+            <div class="col-12 col-lg-6 col-xl-4">
                 <?php includeFile('components/card-news.php', array(
                     'image' => get_template_directory_uri() . '/assets/img/test-production.png',
                     'title' => 'Publicidade Infantil',

@@ -2,6 +2,8 @@
   width: 100%;
   border-radius: 10px;
   overflow: hidden;
+  -o-object-position: center;
+     object-position: center;
 }
 
 .card-production img {

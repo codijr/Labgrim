@@ -4,6 +4,10 @@
     z-index: 2;
 } 
 
+body {
+    overflow-x: hidden;
+}
+
 header#mobile-header {
     background-color: var(--background-white-color);
     border-bottom: 1px solid black;
@@ -77,6 +81,7 @@ header#mobile-header {
                 height: 90vh;
                 background-color: var(--background-white-color);
                 transition: left 200ms ease-in-out;
+                border-top: 1px solid black;
 
                 ul.navbar-nav {
                     li:not(.active):hover {
@@ -110,11 +115,12 @@ header#mobile-header {
 header#desktop-header {
     height: 100vh;
     max-width: 300px;
+    width: 20vw !important;
     background-color: var(--background-white-color);
-    // position: fixed;
-    // float: left;
+    position: fixed;
     top: 0;
     left: 0;
+    z-index: 2;
 
     nav {
         ul.navbar-nav {
@@ -140,6 +146,9 @@ header#desktop-header {
 
 @media (min-width: 992px) {
     #content {
+        position: absolute;
         top: 0;
+        width: 79vw !important;
+        left: 20vw;
     }
 }
