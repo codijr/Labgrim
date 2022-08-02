@@ -10,7 +10,7 @@ var swiper = new Swiper('.swiper-news', {
     disableOnInteraction:false,
   },
   breakpoints: {
-    768: {
+    992: {
       slidesPerView: 2,
     },
     1200: {

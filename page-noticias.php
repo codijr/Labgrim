@@ -1,15 +1,17 @@
 <?php get_header(); ?>
 
 <main>
-    <section class="container d-flex justify-content-center bg-news" id="search-field">
-        <form action="">
-            <div class="d-flex align-items-center" >
-                <input class="w-100" type="search" name="" id="" placeholder="Pesquisar">
-                <button class="d-flex justify-content-center algin-items-center" type="submit">
-                    <?php includeFile('assets/icons/search.svg', array()); ?>
-                </button>
-            </div>
-        </form>
+    <section class="bg-news" id="search-field">
+        <div class="container d-flex justify-content-center">
+            <form action="">
+                <div class="d-flex align-items-center" >
+                    <input class="w-100" type="search" name="" id="" placeholder="Pesquisar">
+                    <button class="d-flex justify-content-center algin-items-center" type="submit">
+                        <?php includeFile('assets/icons/search.svg', array()); ?>
+                    </button>
+                </div>
+            </form>
+        </div>
     </section>
 
     <section class="container mb-3" id="list-news">
