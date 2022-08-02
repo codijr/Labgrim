@@ -72,6 +72,10 @@
     }
     add_action('wp_enqueue_scripts', 'scripts_files'); 
 
+    //Custom Post Types
+    require_once(get_template_directory().'/app/cpt/noticias-cpt.php');
+    require_once(get_template_directory().'/app/cpt/producoes-cpt.php');
+
     //função para fazer componentização
     function includeFile($fileName, $variables) {
         extract($variables);
