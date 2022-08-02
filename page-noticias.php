@@ -14,77 +14,22 @@
 
     <section class="container mb-3" id="list-news">
         <div class="row gx-3 gy-3">
-            <div class="col-12 col-lg-4">
-                <?php includeFile('components/card-news.php', array(
-                    'image' => get_template_directory_uri() . '/assets/img/test-production.png',
-                    'title' => 'Publicidade Infantil',
-                    'subtitle' => 'Filme realizado pelo LabGRIM, alunos da disciplinda de Produção Audiovisual para Crianças e Adolescentes e Fundação Casa Grande.'
-                )) ?>
-            </div>
 
+            <?php 
+                $args = array(
+                    'post_type' => 'noticia'
+                );
+                $query = new WP_Query( $args );
+                while ( $query -> have_posts()) : $query-> the_post();
+            ?>
             <div class="col-12 col-lg-4">
                 <?php includeFile('components/card-news.php', array(
-                    'image' => get_template_directory_uri() . '/assets/img/test-production.png',
-                    'title' => 'Publicidade Infantil',
-                    'subtitle' => 'Filme realizado pelo LabGRIM, alunos da disciplinda de Produção Audiovisual para Crianças e Adolescentes e Fundação Casa Grande.'
+                    'image' => get_the_post_thumbnail_url(),
+                    'title' => get_the_title(),
+                    'subtitle' => get_the_content()
                 )) ?>
             </div>
-
-            <div class="col-12 col-lg-4">
-                <?php includeFile('components/card-news.php', array(
-                    'image' => get_template_directory_uri() . '/assets/img/test-production.png',
-                    'title' => 'Publicidade Infantil',
-                    'subtitle' => 'Filme realizado pelo LabGRIM, alunos da disciplinda de Produção Audiovisual para Crianças e Adolescentes e Fundação Casa Grande.'
-                )) ?>
-            </div>
-
-            <div class="col-12 col-lg-4">
-                <?php includeFile('components/card-news.php', array(
-                    'image' => get_template_directory_uri() . '/assets/img/test-production.png',
-                    'title' => 'Publicidade Infantil',
-                    'subtitle' => 'Filme realizado pelo LabGRIM, alunos da disciplinda de Produção Audiovisual para Crianças e Adolescentes e Fundação Casa Grande.'
-                )) ?>
-            </div>
-
-            <div class="col-12 col-lg-4">
-                <?php includeFile('components/card-news.php', array(
-                    'image' => get_template_directory_uri() . '/assets/img/test-production.png',
-                    'title' => 'Publicidade Infantil',
-                    'subtitle' => 'Filme realizado pelo LabGRIM, alunos da disciplinda de Produção Audiovisual para Crianças e Adolescentes e Fundação Casa Grande.'
-                )) ?>
-            </div>
-
-            <div class="col-12 col-lg-4">
-                <?php includeFile('components/card-news.php', array(
-                    'image' => get_template_directory_uri() . '/assets/img/test-production.png',
-                    'title' => 'Publicidade Infantil',
-                    'subtitle' => 'Filme realizado pelo LabGRIM, alunos da disciplinda de Produção Audiovisual para Crianças e Adolescentes e Fundação Casa Grande.'
-                )) ?>
-            </div>
-
-            <div class="col-12 col-lg-4">
-                <?php includeFile('components/card-news.php', array(
-                    'image' => get_template_directory_uri() . '/assets/img/test-production.png',
-                    'title' => 'Publicidade Infantil',
-                    'subtitle' => 'Filme realizado pelo LabGRIM, alunos da disciplinda de Produção Audiovisual para Crianças e Adolescentes e Fundação Casa Grande.'
-                )) ?>
-            </div>
-
-            <div class="col-12 col-lg-4">
-                <?php includeFile('components/card-news.php', array(
-                    'image' => get_template_directory_uri() . '/assets/img/test-production.png',
-                    'title' => 'Publicidade Infantil',
-                    'subtitle' => 'Filme realizado pelo LabGRIM, alunos da disciplinda de Produção Audiovisual para Crianças e Adolescentes e Fundação Casa Grande.'
-                )) ?>
-            </div>
-
-            <div class="col-12 col-lg-4">
-                <?php includeFile('components/card-news.php', array(
-                    'image' => get_template_directory_uri() . '/assets/img/test-production.png',
-                    'title' => 'Publicidade Infantil',
-                    'subtitle' => 'Filme realizado pelo LabGRIM, alunos da disciplinda de Produção Audiovisual para Crianças e Adolescentes e Fundação Casa Grande.'
-                )) ?>
-            </div>
+            <?php endwhile; ?>
         </div>
     </section>
 
