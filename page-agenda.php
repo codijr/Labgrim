@@ -46,95 +46,23 @@
 
     <section class="container mb-3" id="list-agenda">
         <div class="row gx-3 gy-3">
-            <div class="col-12 col-lg-4">
-                <?php includeFile('components/card-schedule.php', array(
-                    'image' => get_template_directory_uri() . '/assets/img/test-schedule.png',
-                    'title' => 'Entrevista com Edgar Maçal',
-                    'date' => '20/09/2022',
-                    'time' => '04:20',
-                    'subtitle' => 'Filme realizado pelo LabGRIM, alunos da disciplinda de Produção Audiovisual para Crianças e Adolescentes e Fundação Casa Grande.'
-                )) ?>
-            </div>
-
-            <div class="col-12 col-lg-4">
-                <?php includeFile('components/card-schedule.php', array(
-                    'image' => get_template_directory_uri() . '/assets/img/test-schedule.png',
-                    'title' => 'Entrevista com Edgar Maçal',
-                    'date' => '20/09/2022',
-                    'time' => '04:20',
-                    'subtitle' => 'Filme realizado pelo LabGRIM, alunos da disciplinda de Produção Audiovisual para Crianças e Adolescentes e Fundação Casa Grande.'
-                )) ?>
-            </div>
-
-            <div class="col-12 col-lg-4">
-                <?php includeFile('components/card-schedule.php', array(
-                    'image' => get_template_directory_uri() . '/assets/img/test-schedule.png',
-                    'title' => 'Entrevista com Edgar Maçal',
-                    'date' => '20/09/2022',
-                    'time' => '04:20',
-                    'subtitle' => 'Filme realizado pelo LabGRIM, alunos da disciplinda de Produção Audiovisual para Crianças e Adolescentes e Fundação Casa Grande.'
-                )) ?>
-            </div>
-
-            <div class="col-12 col-lg-4">
-                <?php includeFile('components/card-schedule.php', array(
-                    'image' => get_template_directory_uri() . '/assets/img/test-schedule.png',
-                    'title' => 'Entrevista com Edgar Maçal',
-                    'date' => '20/09/2022',
-                    'time' => '04:20',
-                    'subtitle' => 'Filme realizado pelo LabGRIM, alunos da disciplinda de Produção Audiovisual para Crianças e Adolescentes e Fundação Casa Grande.'
-                )) ?>
-            </div>
-
-            <div class="col-12 col-lg-4">
-                <?php includeFile('components/card-schedule.php', array(
-                    'image' => get_template_directory_uri() . '/assets/img/test-schedule.png',
-                    'title' => 'Entrevista com Edgar Maçal',
-                    'date' => '20/09/2022',
-                    'time' => '04:20',
-                    'subtitle' => 'Filme realizado pelo LabGRIM, alunos da disciplinda de Produção Audiovisual para Crianças e Adolescentes e Fundação Casa Grande.'
-                )) ?>
-            </div>
-
-            <div class="col-12 col-lg-4">
-                <?php includeFile('components/card-schedule.php', array(
-                    'image' => get_template_directory_uri() . '/assets/img/test-schedule.png',
-                    'title' => 'Entrevista com Edgar Maçal',
-                    'date' => '20/09/2022',
-                    'time' => '04:20',
-                    'subtitle' => 'Filme realizado pelo LabGRIM, alunos da disciplinda de Produção Audiovisual para Crianças e Adolescentes e Fundação Casa Grande.'
-                )) ?>
-            </div>
-
-            <div class="col-12 col-lg-4">
-                <?php includeFile('components/card-schedule.php', array(
-                    'image' => get_template_directory_uri() . '/assets/img/test-schedule.png',
-                    'title' => 'Entrevista com Edgar Maçal',
-                    'date' => '20/09/2022',
-                    'time' => '04:20',
-                    'subtitle' => 'Filme realizado pelo LabGRIM, alunos da disciplinda de Produção Audiovisual para Crianças e Adolescentes e Fundação Casa Grande.'
-                )) ?>
-            </div>
-
-            <div class="col-12 col-lg-4">
-                <?php includeFile('components/card-schedule.php', array(
-                    'image' => get_template_directory_uri() . '/assets/img/test-schedule.png',
-                    'title' => 'Entrevista com Edgar Maçal',
-                    'date' => '20/09/2022',
-                    'time' => '04:20',
-                    'subtitle' => 'Filme realizado pelo LabGRIM, alunos da disciplinda de Produção Audiovisual para Crianças e Adolescentes e Fundação Casa Grande.'
-                )) ?>
-            </div>
-
-            <div class="col-12 col-lg-4">
-                <?php includeFile('components/card-schedule.php', array(
-                    'image' => get_template_directory_uri() . '/assets/img/test-schedule.png',
-                    'title' => 'Entrevista com Edgar Maçal',
-                    'date' => '20/09/2022',
-                    'time' => '04:20',
-                    'subtitle' => 'Filme realizado pelo LabGRIM, alunos da disciplinda de Produção Audiovisual para Crianças e Adolescentes e Fundação Casa Grande.'
-                )) ?>
-            </div>
+            <?php 
+                $args = array(
+                    'post_type' => 'agendadeatividades'
+                );
+                $query = new WP_Query( $args );
+                while ( $query -> have_posts()) : $query-> the_post();
+            ?>
+                <div class="col-12 col-lg-4">
+                    <?php includeFile('components/card-schedule.php', array(
+                        'image' => get_the_post_thumbnail_url(),
+                        'title' => get_the_title(),
+                        'date' => get_field('data_da_atividade'),
+                        'time' => get_field('hora_da_atividade'),
+                        'subtitle' => get_the_content()
+                    )) ?>
+                </div>
+            <?php endwhile; ?>
         </div>
     </section>
 
