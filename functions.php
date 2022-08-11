@@ -76,6 +76,7 @@
     require_once(get_template_directory().'/app/cpt/noticias-cpt.php');
     require_once(get_template_directory().'/app/cpt/producoes-cpt.php');
     require_once(get_template_directory().'/app/cpt/agenda_de_atividades-cpt.php');
+    require_once(get_template_directory().'/app/cpt/integrantes-cpt.php');
 
     //função para fazer componentização
     function includeFile($fileName, $variables) {
