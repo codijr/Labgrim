@@ -18,6 +18,8 @@
   position: relative;
   height: 95%;
   top: 2.5%;
+  inset: 15px 0 0;
+  width: 100% !important;
 }
 
 .card-researcher #content #thumb {
