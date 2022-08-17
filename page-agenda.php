@@ -2,14 +2,9 @@
 
 <main>
     <section class="container d-flex flex-column align-items-center justify-content-center bg-schedule" id="search-field">
-        <form action="">
-            <div class="d-flex align-items-center mb-5" >
-                <input class="w-100" type="search" name="" id="" placeholder="Pesquisar">
-                <button class="d-flex justify-content-center align-items-center" type="submit">
-                    <?php includeFile('assets/icons/search.svg', array()); ?>
-                </button>
-            </div>
-        </form>
+        <?php includeFile('components/search-input.php', array(
+            'search_page' => 'agendadeatividades'
+        ))?>
 
         <div class="w-100 d-flex justify-content-start" id="filters">
             <div class="row w-75">

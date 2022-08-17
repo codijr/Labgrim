@@ -3,14 +3,9 @@
 <main>
     <section class="bg-news" id="search-field">
         <div class="container d-flex justify-content-center">
-            <form action="">
-                <div class="d-flex align-items-center" >
-                    <input class="w-100" type="search" name="" id="" placeholder="Pesquisar">
-                    <button class="d-flex justify-content-center algin-items-center" type="submit">
-                        <?php includeFile('assets/icons/search.svg', array()); ?>
-                    </button>
-                </div>
-            </form>
+            <?php includeFile('components/search-input.php', array(
+                'search_page' => 'noticias'
+            ))?>
         </div>
     </section>
 

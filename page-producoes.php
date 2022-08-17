@@ -3,14 +3,9 @@
 <main>
     <section class="bg-production" id="search-field">
         <div class="container  d-flex flex-column align-items-center justify-content-center">
-            <form action="">
-                <div class="d-flex align-items-center mb-5" >
-                    <input class="w-100" type="search" name="" id="" placeholder="Pesquisar">
-                    <button class="d-flex justify-content-center align-items-center" type="submit">
-                        <?php includeFile('assets/icons/search.svg', array()); ?>
-                    </button>
-                </div>
-            </form>
+            <?php includeFile('components/search-input.php', array(
+                'search_page' => 'producoes'
+            ))?>
 
             <div class="container w-100 d-flex justify-content-center justify-content-xl-start" id="filters">
                 <div class="row w-100 gx-3 gy-3">
