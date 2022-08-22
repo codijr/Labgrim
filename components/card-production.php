@@ -11,8 +11,8 @@
                 <h3 class="text-production"><?php echo $title ?></h3>
                 <p class="body"><?php echo mb_strimwidth($subtitle, 0, 150, "..."); ?></p>
             <?php else : ?>
-                <h4 class="text-production"><?php echo $title ?></h4>
-                <p class="body-2"><?php echo mb_strimwidth($subtitle, 0, 75, "..."); ?></p>
+                <h4 class="text-production"><?php echo substr(strip_tags($title), 0, 50); ?>...</h4>
+                <p class="body-2"><?php echo substr(strip_tags($subtitle), 0, 75); ?>[...]</p>
             <?php endif; ?>
         </div>
     </div>
