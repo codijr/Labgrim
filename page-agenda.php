@@ -8,7 +8,7 @@
 
         <div class="w-100 d-flex justify-content-start" id="filters">
             <div class="row w-75">
-                <div class="col-12 col-lg-4">
+                <!-- <div class="col-12 col-lg-4">
                     <select class="w-100" name="" id="">
                         <option value="">MÊS</option>
                         <option value="">JANEIRO</option>
@@ -34,13 +34,38 @@
                         <option value="">2020</option>
                         <option value="">2019</option>
                     </select>
-                </div>
+                </div> -->
+                <form action="<?php echo site_url() ?>/wp-admin/admin-ajax.php" method="POST" id="filter">
+                    <?php
+                        echo '<select name="yearfilter"><option value="">Qualquer ano</option>';
+                        for($i = date("Y"); $i >= date("Y")-3; $i--)
+                            echo '<option value="'.$i.'"> '.$i.' </option>';
+                        echo '</select>';
+                    ?>
+                    <select class="w-100" name="monthfilter" id="">
+                        <option value="">MÊS</option>
+                        <option value="1">JANEIRO</option>
+                        <option value="2">FEVEREIRO</option>
+                        <option value="3">MARÇO</option>
+                        <option value="4">ABRIL</option>
+                        <option value="5">MAIO</option>
+                        <option value="6">JUNHO</option>
+                        <option value="7">JULHO</option>
+                        <option value="8">AGOSTO</option>
+                        <option value="9">SETEMBRO</option>
+                        <option value="10">OUTUBRO</option>
+                        <option value="11">NOVEMBRO</option>
+                        <option value="12">DEZEMBRO</option>
+                    </select>
+                    <button>Buscar</button>
+	                <input type="hidden" name="action" value="agendadeatividadesfilter">
+                </form>
             </div>
         </div>
     </section>
 
     <section class="container mb-3" id="list-agenda">
-        <div class="row gx-3 gy-3">
+        <div class="row gx-3 gy-3" id="response">
             <?php 
                 $args = array(
                     'post_type' => 'agendadeatividades'
