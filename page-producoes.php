@@ -8,7 +8,7 @@
             ))?>
 
             <div class="container w-100 d-flex justify-content-center justify-content-xl-start" id="filters">
-                <div class="row w-100 gx-3 gy-3">
+                <!-- <div class="row w-100 gx-3 gy-3">
                     <div class="col-12 col-lg-4 px-0">
                         <select class="w-100 selectpicker" name="" id="">
                             <option value="">TIPO</option>
@@ -35,13 +35,35 @@
                             <option value="">2019</option>
                         </select>
                     </div>
-                </div>
+                </div> -->
+                <form action="<?php echo site_url() ?>/wp-admin/admin-ajax.php" method="POST" id="filter">
+                    <?php
+                        if( $terms = get_terms( array(
+                            'taxonomy' => 'category',
+                            'orderby' => 'name'
+                        ) ) ) : 
+                            echo '<select name="categoryfilter"><option value="">Todos</option>';
+                            foreach ( $terms as $term ) :
+                                echo '<option value="' . $term->term_id . '">' . $term->name . '</option>';
+                            endforeach;
+                            echo '</select>';
+                        endif;  
+                    ?>
+                    <?php
+                        echo '<select name="yearfilter"><option value="">Todos</option>';
+                        for($i = date("Y"); $i >= date("Y")-3; $i--)
+                            echo '<option value="'.$i.'"> '.$i.' </option>';
+                        echo '</select>';
+                    ?>
+                    <button>Buscar</button>
+	                <input type="hidden" name="action" value="producaofilter">
+                </form>
             </div>
         </div>
     </section>
 
     <section class="container mb-3" id="list-productions">
-        <div class="row gx-3 gy-3">
+        <div class="row gx-3 gy-3" id="response">
 
             <?php 
                 $args = array(
