@@ -87,32 +87,99 @@
     // Suporte para o search-form
     add_theme_support( 'html5', array( 'search-form' ) );
 
-    // Customização do search-form padrão (não utilizado)
-    function custom_search_form( $form ) {
-        // search-form personalizado
-        $form = '<form role="search" method="get" id="searchform" class="searchform" action="' . home_url( '/' ) . '" >
-                <div class="d-flex align-items-center" >
-                    <input class="w-100" type="text" value="' . get_search_query() . '" name="s" id="s" placeholder="Pesquisar">
-                    <input type="hidden" name="site_section" value="noticias" />
-                    <button class="d-flex justify-content-center algin-items-center" type="submit" id="searchsubmit" value="'. esc_attr__( 'Search' ) .'">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M19.0004 19L14.6504 14.65" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
-                </div>
-            </form>';
-
-         // search-form padrão  
-        $form2 = '<form role="search" method="get" id="searchform" class="searchform" action="' . home_url( '/' ) . '" >
-            <div class="custom-form"><label class="screen-reader-text" for="s">' . __( 'Search:' ) . '</label>
-            <input type="text" value="' . get_search_query() . '" name="s" id="s" />
-            <input type="hidden" name="site_section" value="noticias" />
-            <input type="submit" id="searchsubmit" value="'. esc_attr__( 'Search' ) .'" />
-        </div>
-        </form>';
-
-      return $form;
+    // Adicionando script AJAX
+    function filter_producoes() {
+        wp_enqueue_script( 'filter-producoes', get_template_directory_uri() . '/assets/scripts/filter-producoes.js', array( 'jquery' ), '1.0.0', true );
     }
-    add_filter( 'get_search_form', 'custom_search_form', 40 );
+    function filter_agendadeatividades() {
+        wp_enqueue_script( 'filter-agendadeatividades', get_template_directory_uri() . '/assets/scripts/filter-agendadeatividades.js', array( 'jquery' ), '1.0.0', true );
+    }
+    add_action( 'wp_enqueue_scripts', 'filter_producoes' );
+    add_action( 'wp_enqueue_scripts', 'filter_agendadeatividades' );
+
+    
+    // Filtro AJAX para Produções
+    function producoes_filter_function(){
+        $args = array(
+            'post_type' => 'producao'
+        );
+        
+        // filtra por categoria
+        if(  isset( $_POST['categoryfilter'] ) && !empty( $_POST['categoryfilter'] )  )
+            $args['tax_query'] = array(
+                array(
+                    'taxonomy' => 'category',
+				    'field' => 'id',
+				    'terms' => $_POST['categoryfilter']
+                )
+            );
+        
+        // filtra por ano
+        if( isset( $_POST['yearfilter'] ) && !empty( $_POST['yearfilter'] ) )
+            $args['date_query'] = array(
+                array(
+                    'year'  => $_POST['yearfilter'],
+                )
+            );
+        
+        
+        $query = new WP_Query( $args );
+        
+        if( $query->have_posts() ) :
+            while( $query->have_posts() ): $query->the_post();
+                echo "<div class='col-12 col-lg-4'>";
+                includeFile('components/card-production.php', array(
+                    'image' =>  get_the_post_thumbnail_url(),
+                    'category' => get_the_category( $id )[0]->name ,
+                    'title' => get_the_title(),
+                    'subtitle' => get_the_content()
+                ));
+                echo "</div>";
+            endwhile;
+            wp_reset_postdata();
+        else :
+            echo 'Nada encontrado';
+        endif;
+        
+        die();
+    }
+    add_action('wp_ajax_producaofilter', 'producoes_filter_function');
+    add_action('wp_ajax_nopriv_producaofilter', 'producoes_filter_function');
+
+    function agendadeatividades_filter_function(){
+        $args = array(
+            'post_type' => 'agendadeatividades'
+        );
+
+        if( isset($_POST['monthfilter']) && !empty($_POST['monthfilter']) || isset($_POST['yearfilter']) && !empty($_POST['yearfilter']) )
+            $args['date_query'] = array(
+                array(
+                    'year' => $_POST['yearfilter'],
+                    'month' => $_POST['monthfilter']
+                )
+            );
+
+        $query = new WP_Query( $args );
+        
+        if( $query->have_posts() ) :
+            while( $query->have_posts() ): $query->the_post();
+                echo '<div class="col-12 col-lg-4">';
+                includeFile('components/card-schedule.php', array(
+                    'image' => get_the_post_thumbnail_url(),
+                    'title' => get_the_title(),
+                    'date' => get_field('data_da_atividade'),
+                    'time' => get_field('hora_da_atividade'),
+                    'subtitle' => get_the_content()
+                ));
+                echo '</div>';
+            endwhile;
+            wp_reset_postdata();
+        else :
+            echo 'Nada encontrado';
+        endif;
+        
+        die();
+    }
+    add_action('wp_ajax_agendadeatividadesfilter', 'agendadeatividades_filter_function');
+    add_action('wp_ajax_nopriv_agendadeatividadesfilter', 'agendadeatividades_filter_function');
 ?>
