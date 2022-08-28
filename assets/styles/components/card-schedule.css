@@ -4,7 +4,6 @@
   border-radius: 10px;
   overflow: hidden;
 }
-
 .card-schedule img {
   position: relative;
   width: 100%;
@@ -13,18 +12,13 @@
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
-  -webkit-transition-duration: 500ms;
-          transition-duration: 500ms;
+  transition-duration: 500ms;
 }
 
 .card-schedule:hover {
   cursor: pointer;
 }
-
 .card-schedule:hover img.thumb {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  -webkit-transition-duration: 500ms;
-          transition-duration: 500ms;
-}
-/*# sourceMappingURL=card-schedule.css.map */
+  transform: scale(1.1);
+  transition-duration: 500ms;
+}/*# sourceMappingURL=card-schedule.css.map */
