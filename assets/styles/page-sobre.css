@@ -1,0 +1,105 @@
+#title {
+  background-image: url("../icons/background-pattern.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+main #whatIs #visual {
+  position: relative;
+}
+main #whatIs #visual .d-flex {
+  height: 100%;
+}
+main #whatIs #visual .d-flex .w-100 {
+  height: 300px;
+  position: relative;
+}
+main #whatIs #visual .d-flex .w-100 .bubble-1, main #whatIs #visual .d-flex .w-100 .bubble-2 {
+  position: absolute;
+  background-color: var(--about-color);
+  border-radius: 50%;
+}
+main #whatIs #visual .d-flex .w-100 .bubble-1 {
+  width: 150px;
+  height: 150px;
+  right: 0;
+}
+main #whatIs #visual .d-flex .w-100 .bubble-2 {
+  width: 60px;
+  height: 60px;
+  bottom: 0;
+}
+main #whatIs #visual .d-flex .w-100 img {
+  border-radius: 50%;
+  position: absolute;
+}
+main #whatIs #visual .d-flex .w-100 #labgrim-group {
+  width: 200px;
+  height: 200px;
+  top: 0;
+  left: 0;
+}
+main #whatIs #visual .d-flex .w-100 #labgrim-action {
+  width: 120px;
+  height: 120px;
+  bottom: 0;
+  right: 0;
+}
+main #howStarted {
+  background-image: url("../icons/background-pattern.svg");
+}
+main #howStarted .timeline {
+  margin: 0 auto;
+  max-width: 780px;
+  padding: 25px;
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+}
+main #howStarted .timeline .timeline-middle {
+  position: relative;
+  background-color: var(--background-white-color);
+}
+main #howStarted .timeline .timeline-middle .timeline-point {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 15px;
+  height: 15px;
+  background-color: var(--background-white-color);
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+main #howStarted .timeline .timeline-component {
+  margin: 0 20px 20px 20px;
+}
+main #howStarted .timeline .timeline-component-bg {
+  padding: 3% 4%;
+  background-color: var(--background-white-color);
+  border-radius: 10px;
+}
+
+b {
+  font-weight: 700;
+  color: var(--about-color);
+}
+
+a {
+  text-decoration: underline;
+  color: var(--about-color);
+  word-break: break-all;
+}
+
+@media (max-width: 992px) {
+  main #howStarted .timeline {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  main #howStarted .timeline h4, main #howStarted .timeline p {
+    text-align: center !important;
+  }
+  main #howStarted .timeline .blank-space, main #howStarted .timeline .timeline-middle {
+    display: none;
+  }
+}/*# sourceMappingURL=page-sobre.css.map */

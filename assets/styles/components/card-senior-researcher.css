@@ -2,7 +2,6 @@
   border-radius: 10px;
   position: relative;
 }
-
 .card-senior-researcher #background-detail {
   width: 10%;
   height: 100%;
@@ -12,23 +11,19 @@
   position: absolute;
   background-color: var(--members-color);
 }
-
 .card-senior-researcher #content {
   position: relative;
   width: 95%;
   left: 2.5%;
 }
-
 .card-senior-researcher #content #thumb {
   width: 50%;
   height: 100%;
 }
-
 .card-senior-researcher #content #thumb img {
   width: 140px;
   height: 140px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
-}
-/*# sourceMappingURL=card-senior-researcher.css.map */
+}/*# sourceMappingURL=card-senior-researcher.css.map */

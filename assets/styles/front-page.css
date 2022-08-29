@@ -3,33 +3,26 @@ main #banner {
   height: 55vh;
   overflow: hidden;
 }
-
 main #banner img {
   position: relative;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-transition-duration: 500ms;
-          transition-duration: 500ms;
+  transition-duration: 500ms;
 }
-
 main #banner .filter {
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
-  background-color: #4c9ec152;
+  background-color: rgba(76, 158, 193, 0.3215686275);
 }
-
 main #banner #info {
   top: 50%;
-  -webkit-transform: translateY(-75%);
-          transform: translateY(-75%);
-  -webkit-transition-duration: 500ms;
-          transition-duration: 500ms;
+  transform: translateY(-75%);
+  transition-duration: 500ms;
 }
-
 main #banner #pattern-group {
   width: 100%;
   height: 100%;
@@ -37,106 +30,76 @@ main #banner #pattern-group {
   top: 0;
   left: 0;
 }
-
 main #banner #pattern-group .pattern {
   width: 30px;
   height: 30px;
 }
-
 main #banner #pattern-group #x-1, main #banner #pattern-group #x-2, main #banner #pattern-group #x-3, main #banner #pattern-group #triangle-1, main #banner #pattern-group #circle-1 {
   top: 80%;
 }
-
 main #banner #pattern-group #x-1 {
   left: 15%;
 }
-
 main #banner #pattern-group #triangle-1 {
   left: 30%;
 }
-
 main #banner #pattern-group #x-2 {
   left: 50%;
 }
-
 main #banner #pattern-group #circle-1 {
   left: 65%;
 }
-
 main #banner #pattern-group #x-3 {
   left: 75%;
 }
-
 main #banner:hover {
   cursor: pointer;
 }
-
 main #banner:hover img {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  -webkit-transition-duration: 500ms;
-          transition-duration: 500ms;
+  transform: scale(1.1);
+  transition-duration: 500ms;
 }
-
 main #banner:hover #info {
   top: 45%;
-  -webkit-transition-duration: 500ms;
-          transition-duration: 500ms;
+  transition-duration: 500ms;
 }
-
 main #banner:hover #pattern-group #x-1 {
   top: 12%;
 }
-
 main #banner:hover #pattern-group #triangle-1 {
   top: 60%;
 }
-
 main #banner:hover #pattern-group #x-2 {
   top: 25%;
 }
-
 main #banner:hover #pattern-group #circle-1 {
   top: 60%;
 }
-
 main #banner:hover #pattern-group #x-3 {
   top: 55%;
 }
-
 main #other-news {
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
 }
-
 main #other-news #background {
   border-radius: 20px;
-  -webkit-box-shadow: 0px 2px 7px 2px rgba(0, 0, 0, 0.42);
-          box-shadow: 0px 2px 7px 2px rgba(0, 0, 0, 0.42);
+  box-shadow: 0px 2px 7px 2px rgba(0, 0, 0, 0.42);
 }
-
 main #other-news #background a h5 {
-  -webkit-transition-duration: 500ms;
-          transition-duration: 500ms;
+  transition-duration: 500ms;
 }
-
 main #other-news #background a:hover h5 {
   color: var(--news-color);
-  -webkit-transition-duration: 500ms;
-          transition-duration: 500ms;
+  transition-duration: 500ms;
 }
-
 main #content-home {
   position: relative;
   top: -40px;
 }
-
 main #content-home section #list-production .card-production {
   height: 450px;
 }
-
 main #content-home aside #list-schedule .card-schedule-home + .card-schedule-home {
   border-top: 1px solid #C4C4C4;
   padding-top: 10px;
-}
-/*# sourceMappingURL=front-page.css.map */
+}/*# sourceMappingURL=front-page.css.map */

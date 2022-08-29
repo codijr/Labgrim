@@ -5,23 +5,19 @@
   height: -moz-max-content;
   height: max-content;
 }
-
 .card-ex-researcher #content {
   position: relative;
   height: 95%;
   top: 2.5%;
 }
-
 .card-ex-researcher #content #thumb {
   width: 100%;
   height: 50%;
 }
-
 .card-ex-researcher #content #thumb img {
   width: 100px;
   height: 100px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
-}
-/*# sourceMappingURL=card-ex-researcher.css.map */
+}/*# sourceMappingURL=card-ex-researcher.css.map */

@@ -56,6 +56,10 @@
         if(is_page('integrantes')) {
             wp_enqueue_style('integrantes', get_template_directory_uri().'/assets/styles/page-integrantes.css', array(),'1.0.0', 'all');
         }
+
+        if(is_page('sobre')) {
+            wp_enqueue_style('sobre', get_template_directory_uri().'/assets/styles/page-sobre.css', array(),'1.0.0', 'all');
+        }
     }
     add_action('wp_enqueue_scripts', 'css_files');
 
