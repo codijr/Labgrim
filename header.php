@@ -33,7 +33,7 @@
                     <div class="collapse navbar-collapse pb-5" id="navbarNav">
                         <div class="d-flex flex-column justify-content-between align-items-start h-100">
                             <ul class="navbar-nav w-100">
-                                <li class="nav-item ps-4 py-2 <?php if(is_page('noticias')) echo 'bg-news active'; ?>">
+                                <li class="nav-item ps-4 py-2 <?php if(is_page('noticias') || is_singular('noticia')) echo 'bg-news active'; ?>">
                                     <a class="nav-link" href="<?php echo get_home_url(); ?>/noticias"><h4>NOTÍCIAS</h4></a>
                                 </li>
 
@@ -95,7 +95,7 @@
 
                 <div class="pb-5 d-flex flex-column justify-content-between align-items-start h-75" >
                     <ul class="navbar-nav w-100">
-                        <li class="nav-item ps-4 py-2 <?php if(is_page('noticias')) echo 'bg-news active'; ?>">
+                        <li class="nav-item ps-4 py-2 <?php if(is_page('noticias') || is_singular('noticia')) echo 'bg-news active'; ?>">
                             <a class="nav-link" href="<?php echo get_home_url(); ?>/noticias"><h4>NOTÍCIAS</h4></a>
                         </li>
 
