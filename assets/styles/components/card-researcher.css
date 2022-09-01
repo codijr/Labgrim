@@ -1,9 +1,9 @@
-.card-researcher {
+#card-researcher {
   border-radius: 10px;
   position: relative;
   height: 230px;
 }
-.card-researcher #background-detail {
+#card-researcher #background-detail {
   width: 100%;
   height: 30%;
   top: 0;
@@ -12,16 +12,12 @@
   position: absolute;
   background-color: var(--members-color);
 }
-.card-researcher #content {
-  position: relative;
-  height: 95%;
-  top: 2.5%;
+#card-researcher #content {
+  position: absolute;
+  left: 0;
+  top: 0;
 }
-.card-researcher #content #thumb {
-  width: 100%;
-  height: 50%;
-}
-.card-researcher #content #thumb img {
+#card-researcher #content img {
   width: 100px;
   height: 100px;
   -o-object-fit: cover;

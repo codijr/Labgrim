@@ -7,7 +7,7 @@
                 'search_page' => 'producoes'
             ))?>
 
-            <div class="w-100 pt-3" id="filters-production">
+            <div class="w-100 pt-3" id="filters">
                 <form class="w-100 row gx-3 gy-3" action="<?php echo site_url() ?>/wp-admin/admin-ajax.php" method="POST" id="filter">
                     <?php
                         if( $terms = get_terms( array(
@@ -17,7 +17,7 @@
                             
                             echo '<div class="col-12 col-xl-4">
                                     <select name="categoryfilter" class="selectpicker w-100">
-                                        <option value="">Todos</option>';
+                                        <option value="">Categoria</option>';
                                         foreach ( $terms as $term ) :
                                             echo '<option value="' . $term->term_id . '">' . $term->name . '</option>';
                                         endforeach;
@@ -28,7 +28,7 @@
                     <?php
                         echo '<div class="col-12 col-xl-4">
                                 <select name="yearfilter" class="selectpicker w-100">
-                                    <option value="">Todos</option>';
+                                    <option value="">Ano</option>';
                                     for($i = date("Y"); $i >= date("Y")-3; $i--)
                                         echo '<option value="'.$i.'"> '.$i.' </option>';
                         echo '</select>

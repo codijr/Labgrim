@@ -59,8 +59,10 @@
                 </div>
 
                 <div class="w-100 d-flex justify-content-center pt-4">
-                    <button class="bg-news px-4 py-2" href="<?php echo get_home_url(); ?>/noticias">
-                        <p class="tag text-white">VER MAIS</p>
+                    <button class="bg-news px-4 py-2">
+                        <a href="<?php echo get_home_url(); ?>/noticias">
+                            <p class="tag text-white">VER MAIS</p>
+                        </a>
                     </button>
                 </div>  
             </div>
@@ -91,8 +93,10 @@
                 </div>
 
                 <div class="d-flex justify-content-center mb-5">
-                    <button class="bg-production px-4 py-2" href="<?php echo get_home_url(); ?>/producoes">
-                        <p class="tag text-white">VER MAIS</p>
+                    <button class="bg-production px-4 py-2">
+                        <a href="<?php echo get_home_url(); ?>/producoes">
+                            <p class="tag text-white">VER MAIS</p>
+                        </a>
                     </button>
                 </div>
             </section>
@@ -126,8 +130,10 @@
                     <?php endwhile; ?>
                 </div>
 
-                <button class="bg-schedule px-4 py-2" href="<?php echo get_home_url(); ?>/agenda">
-                    <p class="tag text-white">VER MAIS</p>
+                <button class="bg-schedule px-4 py-2">
+                    <a href="<?php echo get_home_url(); ?>/agenda">
+                        <p class="tag text-white">VER MAIS</p>
+                    </a>
                 </button>
             </aside>
         </div>

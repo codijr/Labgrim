@@ -30,26 +30,24 @@
 
         <h3 class="mb-3 text-members">Pesquisadores</h3>
 
-        <div class="mb-5" id="list-researcher">
-            <div class="row gx-3 gy-3 mb-3">
-                <?php 
-                    $args = array(
-                        'post_type' => 'integrante',
-                        'meta_value' => 'pesquisador'
-                    );
-                    $query = new WP_Query( $args );
-                    while ( $query -> have_posts()) : $query-> the_post();
-                ?>
-                    <div class="col-12 col-lg-3">
+        <!-- <div class="mb-5 w-100 row" id="list-researcher">
+            <?php 
+                $args = array(
+                    'post_type' => 'integrante',
+                    'meta_value' => 'pesquisador'
+                );
+                $query = new WP_Query( $args );
+                while ( $query -> have_posts()) : $query-> the_post();
+            ?>      
+                    <div class="col-12 col-xl-3">
                         <?php includeFile('components/card-researcher.php', array(
-                            'name' => get_the_title(),
-                            'image' => get_the_post_thumbnail_url(),
-                            'email' => get_field('email'),
-                        )) ?>
+                        'name' => get_the_title(),
+                        'image' => get_the_post_thumbnail_url(),
+                        'email' => get_field('email'),
+                    )) ?>
                     </div>
-                <?php endwhile; ?>
-            </div>
-        </div>
+            <?php endwhile; wp_reset_postdata(); ?>
+        </div> -->
 
         <div class="mb-3 d-flex justify-content-between">
             <h3 class="text-members">Ex-pesquisadores</h3>
