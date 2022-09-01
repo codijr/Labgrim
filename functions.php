@@ -60,6 +60,19 @@
         if(is_page('sobre')) {
             wp_enqueue_style('sobre', get_template_directory_uri().'/assets/styles/page-sobre.css', array(),'1.0.0', 'all');
         }
+
+        //single styles
+        if(is_singular('noticia')) {
+            wp_enqueue_style('singleNoticia', get_template_directory_uri().'/assets/styles/single-noticia.css', array(),'1.0.0', 'all');
+        }
+
+        if(is_singular('producao')) {
+            wp_enqueue_style('singleProducao', get_template_directory_uri().'/assets/styles/single-producao.css', array(),'1.0.0', 'all');
+        }
+
+        if(is_singular('agendadeatividades')) {
+            wp_enqueue_style('singleAgenda', get_template_directory_uri().'/assets/styles/single-agendadeatividades.css', array(),'1.0.0', 'all');
+        }
     }
     add_action('wp_enqueue_scripts', 'css_files');
 

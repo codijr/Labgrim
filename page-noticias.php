@@ -23,7 +23,8 @@
                 <?php includeFile('components/card-news.php', array(
                     'image' => get_the_post_thumbnail_url(),
                     'title' => get_the_title(),
-                    'subtitle' => get_the_content()
+                    'subtitle' => get_the_content(),
+                    'url' => get_the_permalink()
                 )) ?>
             </div>
             <?php endwhile; ?>

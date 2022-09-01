@@ -77,7 +77,8 @@
                         'image' =>  get_the_post_thumbnail_url(),
                         'category' => get_the_category( $id )[0]->name ,
                         'title' => get_the_title(),
-                        'subtitle' => get_the_content()
+                        'subtitle' => get_the_excerpt(),
+                        'url' => get_the_permalink()
                     )) ?>
                 </div>
             <?php endwhile; ?>

@@ -35,7 +35,7 @@ function create_producao_cpt() {
 		'label'                 => __( 'Produção', 'text_domain' ),
 		'description'           => __( 'Produções information page.', 'text_domain' ),
 		'labels'                => $labels,
-		'supports'              => array( 'title', 'editor', 'thumbnail', 'revisions', 'page-attributes' ),
+		'supports'              => array( 'title', 'editor', 'thumbnail', 'revisions', 'page-attributes', 'excerpt' ),
 		'taxonomies'            => array( 'category', 'post_tag' ),
 		'hierarchical'          => false,
 		'public'                => true,

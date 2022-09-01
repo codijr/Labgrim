@@ -1,0 +1,13 @@
+main {
+    #title {
+        background-image: url('../icons/background-pattern.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+
+        h1 {
+            a {
+                color: var(--text-white);
+            }
+        }
+    }
+}
