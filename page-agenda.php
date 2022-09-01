@@ -79,7 +79,7 @@
                         'title' => get_the_title(),
                         'date' => get_field('data_da_atividade'),
                         'time' => get_field('hora_da_atividade'),
-                        'subtitle' => get_the_content()
+                        'url' => get_the_permalink()
                     )) ?>
                 </div>
             <?php endwhile; ?>

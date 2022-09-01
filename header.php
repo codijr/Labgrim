@@ -41,7 +41,7 @@
                                     <a class="nav-link" href="<?php echo get_home_url(); ?>/producoes"><h4>PRODUÇÕES</h4></a>
                                 </li>
 
-                                <li class="nav-item ps-4 py-2 <?php if(is_page('agenda')) echo 'bg-schedule active'; ?>">
+                                <li class="nav-item ps-4 py-2 <?php if(is_page('agenda') || is_singular('agendadeatividades')) echo 'bg-schedule active'; ?>">
                                     <a class="nav-link" href="<?php echo get_home_url(); ?>/agenda"><h4>AGENDA DE ATIVIDADES</h4></a>
                                 </li>
 
@@ -103,7 +103,7 @@
                             <a class="nav-link" href="<?php echo get_home_url(); ?>/producoes"><h4>PRODUÇÕES</h4></a>
                         </li>
 
-                        <li class="nav-item ps-4 py-2 <?php if(is_page('agenda')) echo 'bg-schedule active'; ?>">
+                        <li class="nav-item ps-4 py-2 <?php if(is_page('agenda') || is_singular('agendadeatividades')) echo 'bg-schedule active'; ?>">
                             <a class="nav-link" href="<?php echo get_home_url(); ?>/agenda"><h4>AGENDA DE ATIVIDADES</h4></a>
                         </li>
 
