@@ -23,6 +23,9 @@ main #banner #info {
   transform: translateY(-75%);
   transition-duration: 500ms;
 }
+main #banner #info a {
+  color: var(--text-white);
+}
 main #banner #pattern-group {
   width: 100%;
   height: 100%;

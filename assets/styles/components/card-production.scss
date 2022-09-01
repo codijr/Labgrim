@@ -12,6 +12,12 @@
         object-fit: cover;
         transition-duration: 500ms;
     }
+
+    #info {
+        .card-info {
+            height: 100px;
+        }
+    }
 }
 
 .card-production:hover {

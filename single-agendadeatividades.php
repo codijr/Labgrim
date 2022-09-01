@@ -37,6 +37,7 @@
 
                 if($pdf) {
                     includeFile('components/button-pdf.php', array(
+                        'name' => 'BAIXAR PDF',
                         'url' => $pdf,
                     ));
                 }

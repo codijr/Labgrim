@@ -3,8 +3,8 @@
         <img class="thumb" src="<?php echo $image ?>">
         
         <div class="position-absolute bottom-0 w-100" id="info">
-            <div class="card-info bg-white px-3 py-2">
-                <h4 class="text-schedule mb-2"><?php echo $title ?></h4>
+            <div class="card-info bg-white px-3 py-2 d-flex flex-column justify-content-between">
+                <h4 class="text-schedule mb-2"><?php echo mb_strimwidth($title, 0, 50, "..."); ?></h4>
                 <div class="d-flex">
                     <div class="d-flex me-3">
                         <img class="me-2" src="<?php echo get_template_directory_uri(); ?>/assets/icons/calendar.svg">

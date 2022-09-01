@@ -6,15 +6,7 @@ main {
         background-repeat: no-repeat;
         background-position: center;
 
-        form#searchform {
-            div {
-                input:focus {
-                    color: var(--production-color);
-                }
-            }
-        }
-
-        #filters {
+        #filters-production {
             .selectpicker, button {
                 height: 35px;
                 width: 100%;

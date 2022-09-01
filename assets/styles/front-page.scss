@@ -24,6 +24,10 @@ main {
             top: 50%;
             transform: translateY(-75%);
             transition-duration: 500ms;
+
+            a {
+                color: var(--text-white);
+            }
         }
 
         #pattern-group {

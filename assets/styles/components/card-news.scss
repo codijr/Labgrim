@@ -12,6 +12,12 @@
         object-position: center;
         transition-duration: 500ms;
     }
+
+    #info {
+        .card-info {
+            height: 100px;
+        }
+    }
 }
 
 .card-news:hover {
