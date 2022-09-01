@@ -1,12 +1,12 @@
 <?php get_header(); wp_reset_postdata();?>
 
 <main>
-    <section class="container bg-news py-5" id="title">
-        <h1 class="text-white"><?php the_tags('')[0]; ?></h1>
+    <section class="container bg-production py-5" id="title">
+        <h1 class="text-white"><?php the_category(', '); ?></h1>
     </section>
 
     <section class="container py-5">
-        <h1 class="text-news mb-2"><?php echo the_title(); ?></h1>
+        <h1 class="text-production mb-2"><?php echo the_title(); ?></h1>
         <p class="body text-black"><?php echo the_excerpt(); ?></p>
 
         <div class="d-flex mt-4">
@@ -65,7 +65,8 @@
         <div class="row gx-3 gy-3">
             <?php 
                 $args = array(
-                    'post_type' => 'noticia',
+                    'post_type' => 'producao',
+                    'category_name' => get_the_category( $id )[0] -> name,
                     'posts_per_page' => 3,
                     'post__not_in' => array( $post->ID )
                 );
@@ -73,10 +74,11 @@
                 while ( $query -> have_posts()) : $query-> the_post();
             ?>
             <div class="col-12 col-lg-4">
-                <?php includeFile('components/card-news.php', array(
+                <?php includeFile('components/card-production.php', array(
                     'image' =>  get_the_post_thumbnail_url(),
+                    'category' => get_the_category( $id )[0]->name ,
                     'title' => get_the_title(),
-                    'subtitle' => get_the_content(),
+                    'subtitle' => get_the_excerpt(),
                     'url' => get_the_permalink()
                 )) ?>
             </div>

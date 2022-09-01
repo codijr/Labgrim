@@ -37,7 +37,7 @@
                                     <a class="nav-link" href="<?php echo get_home_url(); ?>/noticias"><h4>NOTÍCIAS</h4></a>
                                 </li>
 
-                                <li class="nav-item ps-4 py-2 <?php if(is_page('producoes')) echo 'bg-production active'; ?>">
+                                <li class="nav-item ps-4 py-2 <?php if(is_page('producoes') || is_singular('producao')) echo 'bg-production active'; ?>">
                                     <a class="nav-link" href="<?php echo get_home_url(); ?>/producoes"><h4>PRODUÇÕES</h4></a>
                                 </li>
 
@@ -99,7 +99,7 @@
                             <a class="nav-link" href="<?php echo get_home_url(); ?>/noticias"><h4>NOTÍCIAS</h4></a>
                         </li>
 
-                        <li class="nav-item ps-4 py-2 <?php if(is_page('producoes')) echo 'bg-production active'; ?>">
+                        <li class="nav-item ps-4 py-2 <?php if(is_page('producoes') || is_singular('producao')) echo 'bg-production active'; ?>">
                             <a class="nav-link" href="<?php echo get_home_url(); ?>/producoes"><h4>PRODUÇÕES</h4></a>
                         </li>
 

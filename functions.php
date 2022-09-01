@@ -65,6 +65,10 @@
         if(is_singular('noticia')) {
             wp_enqueue_style('singleNoticia', get_template_directory_uri().'/assets/styles/single-noticia.css', array(),'1.0.0', 'all');
         }
+
+        if(is_singular('producao')) {
+            wp_enqueue_style('singleProducao', get_template_directory_uri().'/assets/styles/single-producao.css', array(),'1.0.0', 'all');
+        }
     }
     add_action('wp_enqueue_scripts', 'css_files');
 
