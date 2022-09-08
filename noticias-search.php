@@ -3,16 +3,9 @@
 <main>
     <section class="bg-news" id="search-field">
         <div class="container d-flex justify-content-center">
-            <form action="">
-                <div class="d-flex align-items-center" >
-                    <input class="w-100" type="search" name="" id="" placeholder="Pesquisar">
-                    <button class="d-flex justify-content-center algin-items-center" type="submit">
-                        <?php includeFile('assets/icons/search.svg', array()); ?>
-                    </button>
-                </div>
-            </form>
-            
-            <?php get_search_form(); ?>
+            <?php includeFile('components/search-input.php', array(
+                'search_page' => 'noticias'
+            ))?>
         </div>
     </section>
 
@@ -26,14 +19,14 @@
                     'post_type' => 'noticia',
                 );
                 $query = new WP_Query( $args );
-                _e("<h2>Resultados para: ".get_query_var('s')."</h2>");
                 while ( $query -> have_posts()) : $query-> the_post();  
             ?>
             <div class="col-12 col-lg-4">
                 <?php includeFile('components/card-news.php', array(
                     'image' => get_the_post_thumbnail_url(),
                     'title' => get_the_title(),
-                    'subtitle' => get_the_content()
+                    'subtitle' => get_the_content(),
+                    'url' => get_the_permalink()
                 )) ?>
             </div>
             <?php endwhile; ?>

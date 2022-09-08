@@ -35,6 +35,7 @@
         wp_enqueue_style('card-researcher', get_template_directory_uri().'/assets/styles/components/card-researcher.css', array(),'1.0.0', 'all');
         wp_enqueue_style('card-ex-researcher', get_template_directory_uri().'/assets/styles/components/card-ex-researcher.css', array(),'1.0.0', 'all');
         wp_enqueue_style('card-schedule-home', get_template_directory_uri().'/assets/styles/components/card-schedule-home.css', array(),'1.0.0', 'all');
+        wp_enqueue_style('search-input', get_template_directory_uri().'/assets/styles/components/search-input.css', array(),'1.0.0', 'all');
 
         //pages styles
         if(is_front_page()) {
@@ -73,6 +74,11 @@
         if(is_singular('agendadeatividades')) {
             wp_enqueue_style('singleAgenda', get_template_directory_uri().'/assets/styles/single-agendadeatividades.css', array(),'1.0.0', 'all');
         }
+
+        //search pages
+        if(is_search('producoes')) {
+            wp_enqueue_style('producoesSearch', get_template_directory_uri().'/assets/styles/producoes-search.css', array(),'1.0.0', 'all');
+        }
     }
     add_action('wp_enqueue_scripts', 'css_files');
 
@@ -99,6 +105,14 @@
     function includeFile($fileName, $variables) {
         extract($variables);
         include($fileName);
+    }
+
+    //função para verificar a página
+    function verify_page() {
+        if(is_singular('noticia')) return 'news';
+        else if(is_singular('producao')) return 'production';
+        else if(is_page('integrantes')) return 'members';
+        else return 'schedule';
     }
 
     // Suporte para o search-form

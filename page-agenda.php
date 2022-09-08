@@ -1,64 +1,47 @@
 <?php get_header(); ?>
 
 <main>
-    <section class="container d-flex flex-column align-items-center justify-content-center bg-schedule" id="search-field">
-        <?php includeFile('components/search-input.php', array(
-            'search_page' => 'agendadeatividades'
-        ))?>
-
-        <div class="w-100 d-flex justify-content-start" id="filters">
-            <div class="row w-75">
-                <!-- <div class="col-12 col-lg-4">
-                    <select class="w-100" name="" id="">
-                        <option value="">MÊS</option>
-                        <option value="">JANEIRO</option>
-                        <option value="">FEVEREIRO</option>
-                        <option value="">MARÇO</option>
-                        <option value="">ABRIL</option>
-                        <option value="">MAIO</option>
-                        <option value="">JUNHO</option>
-                        <option value="">JULHO</option>
-                        <option value="">AGOSTO</option>
-                        <option value="">SETEMBRO</option>
-                        <option value="">OUTUBRO</option>
-                        <option value="">NOVEMBRO</option>
-                        <option value="">DEZEMBRO</option>
-                    </select>
-                </div>
-
-                <div class="col-12 col-lg-4">
-                    <select class="w-100" name="" id="">
-                        <option value="">ANO</option>
-                        <option value="">2022</option>
-                        <option value="">2021</option>
-                        <option value="">2020</option>
-                        <option value="">2019</option>
-                    </select>
-                </div> -->
-                <form action="<?php echo site_url() ?>/wp-admin/admin-ajax.php" method="POST" id="filter">
+    <section class="bg-schedule" id="search-field">
+        <div class="container d-flex flex-column align-items-center justify-content-center">
+            <?php includeFile('components/search-input.php', array(
+                'search_page' => 'agendadeatividades'
+            ))?>
+        
+            <div class="w-100 pt-3" id="filters">
+                <form class="w-100 row gx-3 gy-3" action="<?php echo site_url() ?>/wp-admin/admin-ajax.php" method="POST" id="filter">
                     <?php
-                        echo '<select name="yearfilter"><option value="">Qualquer ano</option>';
-                        for($i = date("Y"); $i >= date("Y")-3; $i--)
-                            echo '<option value="'.$i.'"> '.$i.' </option>';
-                        echo '</select>';
+                        echo '<div class="col-12 col-xl-3">
+                                <select class="w-100 selectpicker" name="yearfilter">
+                                    <option value="">Ano</option>';
+                                    for($i = date("Y"); $i >= date("Y")-3; $i--)
+                                        echo '<option value="'.$i.'"> '.$i.' </option>';
+                        echo '</select>
+                                </div>';
                     ?>
-                    <select class="w-100" name="monthfilter" id="">
-                        <option value="">MÊS</option>
-                        <option value="1">JANEIRO</option>
-                        <option value="2">FEVEREIRO</option>
-                        <option value="3">MARÇO</option>
-                        <option value="4">ABRIL</option>
-                        <option value="5">MAIO</option>
-                        <option value="6">JUNHO</option>
-                        <option value="7">JULHO</option>
-                        <option value="8">AGOSTO</option>
-                        <option value="9">SETEMBRO</option>
-                        <option value="10">OUTUBRO</option>
-                        <option value="11">NOVEMBRO</option>
-                        <option value="12">DEZEMBRO</option>
-                    </select>
-                    <button>Buscar</button>
-	                <input type="hidden" name="action" value="agendadeatividadesfilter">
+                    <div class="col-12 col-xl-3">
+                        <select class="w-100 selectpicker" name="monthfilter" id="">
+                            <option value="">Mês</option>
+                            <option value="1">JANEIRO</option>
+                            <option value="2">FEVEREIRO</option>
+                            <option value="3">MARÇO</option>
+                            <option value="4">ABRIL</option>
+                            <option value="5">MAIO</option>
+                            <option value="6">JUNHO</option>
+                            <option value="7">JULHO</option>
+                            <option value="8">AGOSTO</option>
+                            <option value="9">SETEMBRO</option>
+                            <option value="10">OUTUBRO</option>
+                            <option value="11">NOVEMBRO</option>
+                            <option value="12">DEZEMBRO</option>
+                        </select>
+                    </div>
+
+                    <div class="col-12 col-xl-3">
+                        <button class="w-100 bg-white">
+                            <p class="tag text-schedule">Buscar</p>
+                        </button>
+                    </div>
+                    <input type="hidden" name="action" value="agendadeatividadesfilter">
                 </form>
             </div>
         </div>

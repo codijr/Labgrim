@@ -1,11 +1,11 @@
 <a href="<?php echo $url ?>"> 
     <div class="card-schedule-home w-100 d-flex">
-        <div id="thumb">
+        <div class="w-100" id="thumb">
             <img src="<?php echo $image ?>">
         </div>
 
-        <div class="d-flex flex-column justify-content-around px-3" id="info">
-            <h5 class="text-schedule"><?php echo $title ?></h5>
+        <div class="d-flex flex-column justify-content-around px-3 w-100" id="info">
+            <h5 class="text-schedule"><?php echo mb_strimwidth($title, 0, 50, "..."); ?></h5>
 
             <div class="d-flex">
                 <div class="d-flex me-3">

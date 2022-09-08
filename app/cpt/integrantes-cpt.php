@@ -37,7 +37,7 @@ function create_integrante_cpt() {
 		'labels' => $labels,
 		'menu_icon' => 'dashicons-businessman',
 		'supports' => array('title', 'editor', 'thumbnail', 'revisions', 'author', 'page-attributes', 'custom-fields'),
-		'taxonomies' => array('category', 'post_tag'),
+		'taxonomies' => array(),
 		'public' => true,
 		'show_ui' => true,
 		'show_in_menu' => true,

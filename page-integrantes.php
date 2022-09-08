@@ -49,12 +49,6 @@
                     </div>
                 <?php endwhile; ?>
             </div>
-
-            <div class="w-100 d-flex justify-content-center">
-                <button class="bg-members px-4 py-2">
-                    <p class="tag text-white">VER MAIS</p>
-                </button>
-            </div>
         </div>
 
         <div class="mb-3 d-flex justify-content-between">
@@ -82,7 +76,7 @@
                     <div class="col-12 col-lg-3">
                         <?php includeFile('components/card-ex-researcher.php', array(
                             'name' => get_the_title(),
-                            'cargo' => get_field('cargo'),
+                            'email' => get_field('email'),
                         )) ?>
                     </div>
                 <?php endwhile; ?>

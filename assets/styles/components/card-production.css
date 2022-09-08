@@ -14,6 +14,9 @@
      object-fit: cover;
   transition-duration: 500ms;
 }
+.card-production #info .card-info {
+  height: 100px;
+}
 
 .card-production:hover {
   cursor: pointer;

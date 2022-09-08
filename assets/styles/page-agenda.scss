@@ -6,48 +6,34 @@ main {
         background-repeat: no-repeat;
         background-position: center;
 
-        form {
-            width: 60%;
-
+        form#searchform {
             div {
-                height: 50px;
-                border-radius: 50px;
-                padding: 5px 10px;
-                background-color: white;
-
-                input {
-                    height: 100%;
-                    border: 0;
-                    outline: none;
-                }
-
                 input:focus {
                     color: var(--schedule-color);
-                }
-
-                input[type="search"]::-webkit-search-decoration,
-                input[type="search"]::-webkit-search-cancel-button,
-                input[type="search"]::-webkit-search-results-button,
-                input[type="search"]::-webkit-search-results-decoration { 
-                    display: none; 
-                }
-
-                button {
-                    background-color: transparent;
                 }
             }
         }
 
         #filters {
-            select {
+            .selectpicker, button {
                 height: 35px;
+                width: 100%;
                 border-radius: 30px;
-                padding: 0 10px;
+                padding: 0 13px;
                 border: 0;
+                box-shadow: none;
+                color: var(--text-black);
+                background-color: var(--background-white-color);
 
-                option {
-                    background:transparent; 
+                .filter-option {
+                    display: flex;
+                    align-items: center;
                 }
+            }
+
+            .selectpicker:focus, .selectpicker:active {
+                outline: 0;
+                border: 0;
             }
         }
     }
@@ -55,5 +41,15 @@ main {
     #list-agenda {
         position: relative;
         top: -60px;
+    }
+}
+
+@media (min-width: 992px) {
+    main {
+        #search-field {
+            form {
+                width: 60%;
+            }
+        }
     }
 }

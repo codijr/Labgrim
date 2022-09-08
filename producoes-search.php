@@ -4,45 +4,50 @@
     <section class="bg-production" id="search-field">
         <div class="container  d-flex flex-column align-items-center justify-content-center">
             <?php includeFile('components/search-input.php', array(
-                'search_page' => 'noticias'
+                'search_page' => 'producoes'
             ))?>
 
-            <div class="container w-100 d-flex justify-content-center justify-content-xl-start" id="filters">
-                <div class="row w-100 gx-3 gy-3">
-                    <div class="col-12 col-lg-4 px-0">
-                        <select class="w-100 selectpicker" name="" id="">
-                            <option value="">TIPO</option>
-                            <option value="">AUDIOVISUAL</option>
-                            <option value="">ARTIGO</option>
-                        </select>
+            <div class="w-100 pt-3" id="filters-production">
+                <form class="w-100 row gx-3 gy-3" action="<?php echo site_url() ?>/wp-admin/admin-ajax.php" method="POST" id="filter">
+                    <?php
+                        if( $terms = get_terms( array(
+                            'taxonomy' => 'category',
+                            'orderby' => 'name'
+                        ) ) ) : 
+                            
+                            echo '<div class="col-12 col-xl-4">
+                                    <select name="categoryfilter" class="selectpicker w-100">
+                                        <option value="">Todos</option>';
+                                        foreach ( $terms as $term ) :
+                                            echo '<option value="' . $term->term_id . '">' . $term->name . '</option>';
+                                        endforeach;
+                            echo '</select>
+                                </div>';
+                        endif;  
+                    ?>
+                    <?php
+                        echo '<div class="col-12 col-xl-4">
+                                <select name="yearfilter" class="selectpicker w-100">
+                                    <option value="">Todos</option>';
+                                    for($i = date("Y"); $i >= date("Y")-3; $i--)
+                                        echo '<option value="'.$i.'"> '.$i.' </option>';
+                        echo '</select>
+                            </div>';
+                    ?>
+                    <div class="col-12 col-xl-4">
+                        <button class="w-100 bg-white">
+                            <p class="tag text-production">Buscar</p>
+                        </button>
                     </div>
-
-                    <div class="col-12 col-lg-4 px-0">
-                        <select class="w-100 selectpicker" name="" id="">
-                            <option value="">ASSUNTO</option>
-                            <option value="">INFANCIA</option>
-                            <option value="">JUVENTUDE</option>
-                            <option value="">MÍDIA</option>
-                        </select>
-                    </div>
-
-                    <div class="col-12 col-lg-4 px-0">
-                        <select class="w-100 selectpicker" name="" id="">
-                            <option value="">DATA</option>
-                            <option value="">2022</option>
-                            <option value="">2021</option>
-                            <option value="">2020</option>
-                            <option value="">2019</option>
-                        </select>
-                    </div>
-                </div>
+                    
+	                <input type="hidden" name="action" value="producaofilter">
+                </form>
             </div>
         </div>
     </section>
 
     <section class="container mb-3" id="list-productions">
         <div class="row gx-3 gy-3">
-
             <?php
                 $s=get_search_query();
                 $args = array(
@@ -50,7 +55,6 @@
                     'post_type' => 'producao',
                 );
                 $query = new WP_Query( $args );
-                _e("<h2>Resultados para: ".get_query_var('s')."</h2>");
                 while ( $query -> have_posts()) : $query-> the_post();  
             ?>
                 <div class="col-12 col-lg-4">
