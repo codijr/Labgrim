@@ -34,7 +34,8 @@ function create_producao_cpt() {
 	$args = array(
 		'label'                 => __( 'Produção', 'text_domain' ),
 		'description'           => __( 'Produções information page.', 'text_domain' ),
-		'labels'                => $labels,
+		'labels' => $labels,
+		'menu_icon' => 'dashicons-format-video',
 		'supports'              => array( 'title', 'editor', 'thumbnail', 'revisions', 'page-attributes', 'excerpt' ),
 		'taxonomies'            => array( 'category', 'post_tag' ),
 		'hierarchical'          => false,
@@ -42,7 +43,6 @@ function create_producao_cpt() {
 		'show_ui'               => true,
 		'show_in_menu'          => true,
 		'menu_position'         => 5,
-		'menu_icon'             => 'building',
 		'show_in_admin_bar'     => true,
 		'show_in_nav_menus'     => true,
 		'can_export'            => true,

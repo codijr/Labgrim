@@ -35,6 +35,7 @@ function create_noticias_cpt() {
 		'label'                 => __( 'Notícia', 'text_domain' ),
 		'description'           => __( 'Descrição da notícia	', 'text_domain' ),
 		'labels'                => $labels,
+		'menu_icon' => 'dashicons-welcome-widgets-menus',
 		'supports'              => array( 'title', 'editor', 'thumbnail', 'revisions', 'excerpt', 'author'),
 		'taxonomies'            => array( 'post_tag' ),
 		'hierarchical'          => false,

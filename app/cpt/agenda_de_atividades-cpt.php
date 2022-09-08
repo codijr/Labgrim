@@ -35,7 +35,7 @@ function create_agendadeatividades_cpt() {
 		'label' => __( 'Agenda de Atividades', 'textdomain' ),
 		'description' => __( '', 'textdomain' ),
 		'labels' => $labels,
-		'menu_icon' => '',
+		'menu_icon' => 'dashicons-calendar-alt',
 		'supports' => array('title', 'editor', 'thumbnail', 'revisions', 'author', 'page-attributes', 'custom-fields'),
 		'taxonomies' => array(),
 		'public' => true,
