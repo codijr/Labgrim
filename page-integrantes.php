@@ -30,7 +30,7 @@
 
         <h3 class="mb-3 text-members">Pesquisadores</h3>
 
-        <!-- <div class="mb-5 w-100 row" id="list-researcher">
+        <div class="mb-5 w-100 gy-4 row" id="list-researcher">
             <?php 
                 $args = array(
                     'post_type' => 'integrante',
@@ -47,7 +47,7 @@
                     )) ?>
                     </div>
             <?php endwhile; wp_reset_postdata(); ?>
-        </div> -->
+        </div>
 
         <div class="mb-3 d-flex justify-content-between">
             <h3 class="text-members">Ex-pesquisadores</h3>
