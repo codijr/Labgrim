@@ -13,17 +13,21 @@
                 </div>
             </div>
 
-            <div class="col-12 col-lg-4 mb-3" id="contact">
-                <p class="body text-center text-lg-end mb-2">grim.ufc@gmail.com</p>
-                <p class="body text-center text-lg-end mb-2">Av. da Universidade, 2762 -  60.020-181 - Fortaleza-CE</p>
+            <div class="col-12 col-lg-6 mb-3" id="contact">
+                <p class="body text-center text-lg-end mb-2">labgrim@virtual.ufc.br</p>
+                <p class="body text-center text-lg-end mb-2">Campus do Pici, Instituto de Cultura e Arte (ICA) - Sala CS 201, Av. Mister Hull, s/n - Pici, Fortaleza - CE, 60455-760</p>
                 <div class="d-flex justify-content-center justify-content-lg-end" id="social">
-                    <div class="d-flex justify-content-center align-items-center rounded-circle me-2" id="facebook">
-                        <?php includeFile('assets/icons/facebook.svg', array()); ?>
-                    </div>
+                    <a href="https://www.facebook.com/labgrim/" target="_blank">
+                        <div class="d-flex justify-content-center align-items-center rounded-circle me-2" id="facebook">
+                            <?php includeFile('assets/icons/facebook.svg', array()); ?>
+                        </div>
+                    </a>
 
-                    <div class="d-flex justify-content-center align-items-center rounded-circle" id="instagram">
-                        <?php includeFile('assets/icons/instagram.svg', array()); ?>
-                    </div>
+                    <a href="https://www.instagram.com/labgrim/" target="_blank">
+                        <div class="d-flex justify-content-center align-items-center rounded-circle" id="instagram">
+                            <?php includeFile('assets/icons/instagram.svg', array()); ?>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
