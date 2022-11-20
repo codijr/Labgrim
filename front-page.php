@@ -60,7 +60,7 @@
 
                 <div class="w-100 d-flex justify-content-center pt-4">
                     <button class="bg-news px-4 py-2">
-                        <a href="<?php echo get_home_url(); ?>/noticias">
+                        <a href="<?php echo get_home_url(); ?>/index.php/noticias">
                             <p class="tag text-white">VER MAIS</p>
                         </a>
                     </button>
@@ -94,7 +94,7 @@
 
                 <div class="d-flex justify-content-center mb-5">
                     <button class="bg-production px-4 py-2">
-                        <a href="<?php echo get_home_url(); ?>/producoes">
+                        <a href="<?php echo get_home_url(); ?>/index.php/producoes">
                             <p class="tag text-white">VER MAIS</p>
                         </a>
                     </button>
@@ -131,7 +131,7 @@
                 </div>
 
                 <button class="bg-schedule px-4 py-2">
-                    <a href="<?php echo get_home_url(); ?>/agenda">
+                    <a href="<?php echo get_home_url(); ?>/index.php/agenda">
                         <p class="tag text-white">VER MAIS</p>
                     </a>
                 </button>
