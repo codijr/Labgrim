@@ -1,0 +1,81 @@
+main {
+    #search-field {
+        padding-top: 40px;
+        padding-bottom: 120px;
+        background-image: url('../icons/background-pattern.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+
+        form#searchform {
+            div {
+                input:focus {
+                    color: var(--schedule-color);
+                }
+            }
+        }
+
+        #filters {
+            .selectpicker, button {
+                height: 35px;
+                width: 100%;
+                border-radius: 30px;
+                padding: 0 13px;
+                border: 0;
+                box-shadow: none;
+                color: var(--text-black);
+                background-color: var(--background-white-color);
+
+                .filter-option {
+                    display: flex;
+                    align-items: center;
+                }
+            }
+
+            .selectpicker:focus, .selectpicker:active {
+                outline: 0;
+                border: 0;
+            }
+        }
+    }
+
+    #list-agenda {
+        position: relative;
+        top: -60px;
+    }
+
+    nav.pagination {
+        .pagination-wrapper {
+            width: 120px;
+            
+            span, a {
+                width: 30px;
+                height: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                background-color: #D9D9D9;
+                color: var(--text-white-color);
+            }
+
+            span {
+                background-color: var(--schedule-color);
+            }
+
+            a.next, a.prev {
+                background-color: transparent;
+                color: var(--schedule-color);
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    main {
+        #search-field {
+            form {
+                width: 60%;
+            }
+        }
+    }
+}

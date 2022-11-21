@@ -24,61 +24,44 @@
 
         //global styles
         wp_enqueue_style('global', get_template_directory_uri().'/assets/styles/global.css', array(),'1.0.0', 'all');
-        wp_enqueue_style('header', get_template_directory_uri().'/assets/styles/header.css', array(),'1.0.0', 'all');
-        wp_enqueue_style('footer', get_template_directory_uri().'/assets/styles/footer.css', array(),'1.0.0', 'all');
-
-        //components
-        wp_enqueue_style('card-production', get_template_directory_uri().'/assets/styles/components/card-production.css', array(),'1.0.0', 'all');
-        wp_enqueue_style('card-news', get_template_directory_uri().'/assets/styles/components/card-news.css', array(),'1.0.0', 'all');
-        wp_enqueue_style('card-schedule', get_template_directory_uri().'/assets/styles/components/card-schedule.css', array(),'1.0.0', 'all');
-        wp_enqueue_style('card-senior-researcher', get_template_directory_uri().'/assets/styles/components/card-senior-researcher.css', array(),'1.0.0', 'all');
-        wp_enqueue_style('card-researcher', get_template_directory_uri().'/assets/styles/components/card-researcher.css', array(),'1.0.0', 'all');
-        wp_enqueue_style('card-ex-researcher', get_template_directory_uri().'/assets/styles/components/card-ex-researcher.css', array(),'1.0.0', 'all');
-        wp_enqueue_style('card-schedule-home', get_template_directory_uri().'/assets/styles/components/card-schedule-home.css', array(),'1.0.0', 'all');
-        wp_enqueue_style('search-input', get_template_directory_uri().'/assets/styles/components/search-input.css', array(),'1.0.0', 'all');
 
         //pages styles
         if(is_front_page()) {
-            wp_enqueue_style('front-page', get_template_directory_uri().'/assets/styles/front-page.css', array(),'1.0.0', 'all');
+            wp_enqueue_style('front-page', get_template_directory_uri().'/pages/front/styles.css', array(),'1.0.0', 'all');
         }
 
         if(is_page('noticias') || is_search('noticias')) {
-            wp_enqueue_style('noticias', get_template_directory_uri().'/assets/styles/page-noticias.css', array(),'1.0.0', 'all');
+            wp_enqueue_style('noticias', get_template_directory_uri().'/pages/noticias/styles.css', array(),'1.0.0', 'all');
         }
 
         if(is_page('producoes') || is_search('producoes')) {
-            wp_enqueue_style('producoes', get_template_directory_uri().'/assets/styles/page-producoes.css', array(),'1.0.0', 'all');
+            wp_enqueue_style('producoes', get_template_directory_uri().'/pages/producoes/styles.css', array(),'1.0.0', 'all');
         }
 
         if(is_page('agenda') || is_search('agenda')) {
-            wp_enqueue_style('agenda', get_template_directory_uri().'/assets/styles/page-agenda.css', array(),'1.0.0', 'all');
+            wp_enqueue_style('agenda', get_template_directory_uri().'/pages/agenda/styles.css', array(),'1.0.0', 'all');
         }
 
         if(is_page('integrantes')) {
-            wp_enqueue_style('integrantes', get_template_directory_uri().'/assets/styles/page-integrantes.css', array(),'1.0.0', 'all');
+            wp_enqueue_style('integrantes', get_template_directory_uri().'/pages/integrantes/styles.css', array(),'1.0.0', 'all');
         }
 
         if(is_page('sobre')) {
-            wp_enqueue_style('sobre', get_template_directory_uri().'/assets/styles/page-sobre.css', array(),'1.0.0', 'all');
+            wp_enqueue_style('sobre', get_template_directory_uri().'/pages/sobre/styles.css', array(),'1.0.0', 'all');
         }
 
         //single styles
         if(is_singular('noticia')) {
-            wp_enqueue_style('singleNoticia', get_template_directory_uri().'/assets/styles/single-noticia.css', array(),'1.0.0', 'all');
+            wp_enqueue_style('singleNoticia', get_template_directory_uri().'/pages/noticias/single/styles.css', array(),'1.0.0', 'all');
         }
 
         if(is_singular('producao')) {
-            wp_enqueue_style('singleProducao', get_template_directory_uri().'/assets/styles/single-producao.css', array(),'1.0.0', 'all');
+            wp_enqueue_style('singleProducao', get_template_directory_uri().'/pages/producoes/single/styles.css', array(),'1.0.0', 'all');
         }
 
         if(is_singular('agendadeatividades')) {
-            wp_enqueue_style('singleAgenda', get_template_directory_uri().'/assets/styles/single-agendadeatividades.css', array(),'1.0.0', 'all');
+            wp_enqueue_style('singleAgenda', get_template_directory_uri().'/pages/agenda/single/styles.css', array(),'1.0.0', 'all');
         }
-
-        //search pages
-        // if(is_search('producoes')) {
-        //     wp_enqueue_style('producoesSearch', get_template_directory_uri().'/assets/styles/producoes-search.css', array(),'1.0.0', 'all');
-        // }
     }
     add_action('wp_enqueue_scripts', 'css_files');
 
@@ -159,7 +142,7 @@
         if( $query->have_posts() ) :
             while( $query->have_posts() ): $query->the_post();
                 echo "<div class='col-12 col-lg-4'>";
-                includeFile('components/card-production.php', array(
+                includeFile('components/card-production/index.php', array(
                     'image' =>  get_the_post_thumbnail_url(),
                     'category' => get_the_category( $id )[0]->name ,
                     'title' => get_the_title(),
@@ -195,7 +178,7 @@
         if( $query->have_posts() ) :
             while( $query->have_posts() ): $query->the_post();
                 echo '<div class="col-12 col-lg-4">';
-                includeFile('components/card-schedule.php', array(
+                includeFile('components/card-schedule/index.php', array(
                     'image' => get_the_post_thumbnail_url(),
                     'title' => get_the_title(),
                     'date' => get_field('data_da_atividade'),

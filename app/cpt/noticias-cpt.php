@@ -5,8 +5,6 @@ function create_noticias_cpt() {
 	$labels = array(
 		'name'                  => _x( 'Notícias', 'Post Type General Name', 'text_domain' ),
 		'singular_name'         => _x( 'Notícia', 'Post Type Singular Name', 'text_domain' ),
-		'menu_name'             => _x( 'Notícias', 'text_domain' ),
-		'name_admin_bar'        => _x( 'Notícias', 'text_domain' ),
 	);
 	$args = array(
 		'label'                 => __( 'Notícia', 'text_domain' ),

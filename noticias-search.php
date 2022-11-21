@@ -3,7 +3,7 @@
 <main>
     <section class="bg-news" id="search-field">
         <div class="container d-flex justify-content-center">
-            <?php includeFile('components/search-input.php', array(
+            <?php includeFile('components/search-input/index.php', array(
                 'search_page' => 'noticias'
             ))?>
         </div>
@@ -22,7 +22,7 @@
                 while ( $query -> have_posts()) : $query-> the_post();  
             ?>
             <div class="col-12 col-lg-4">
-                <?php includeFile('components/card-news.php', array(
+                <?php includeFile('components/card-news/index.php', array(
                     'image' => get_the_post_thumbnail_url(),
                     'title' => get_the_title(),
                     'subtitle' => get_the_content(),

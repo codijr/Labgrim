@@ -3,7 +3,7 @@
 <main>
     <section class="bg-schedule" id="search-field">
         <div class="container d-flex flex-column align-items-center justify-content-center">
-            <?php includeFile('components/search-input.php', array(
+            <?php includeFile('components/search-input/index.php', array(
                 'search_page' => 'agendadeatividades'
             ))?>
         
@@ -59,7 +59,7 @@
                 while ( $query -> have_posts()) : $query-> the_post();  
             ?>
                 <div class="col-12 col-lg-4">
-                    <?php includeFile('components/card-schedule.php', array(
+                    <?php includeFile('components/card-schedule/index.php', array(
                         'image' => get_the_post_thumbnail_url(),
                         'title' => get_the_title(),
                         'date' => get_field('data_da_atividade'),
