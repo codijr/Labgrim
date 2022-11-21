@@ -1,0 +1,64 @@
+main #search-field {
+  padding-top: 40px;
+  padding-bottom: 120px;
+  background-image: url("../icons/background-pattern.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+main #search-field form#searchform div input:focus {
+  color: var(--production-color);
+}
+main #search-field #filters .selectpicker, main #search-field #filters button {
+  height: 35px;
+  width: 100%;
+  border-radius: 30px;
+  padding: 0 13px;
+  border: 0;
+  box-shadow: none;
+  color: var(--text-black);
+  background-color: var(--background-white-color);
+}
+main #search-field #filters .selectpicker .filter-option, main #search-field #filters button .filter-option {
+  display: flex;
+  align-items: center;
+}
+main #search-field #filters .selectpicker:focus, main #search-field #filters .selectpicker:active {
+  outline: 0;
+  border: 0;
+}
+main #list-productions {
+  position: relative;
+  top: -60px;
+}
+main #list-productions .card-production {
+  height: 300px;
+}
+main nav.pagination .pagination-wrapper {
+  width: 120px;
+}
+main nav.pagination .pagination-wrapper span, main nav.pagination .pagination-wrapper a {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #D9D9D9;
+  color: var(--text-white-color);
+}
+main nav.pagination .pagination-wrapper span {
+  background-color: var(--production-color);
+}
+main nav.pagination .pagination-wrapper a.next, main nav.pagination .pagination-wrapper a.prev {
+  background-color: transparent;
+  color: var(--production-color);
+}
+
+@media (min-width: 992px) {
+  main #search-field form {
+    width: 60% !important;
+  }
+  main #search-field #filters .row {
+    width: 75% !important;
+  }
+}/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,23 @@
+form#searchform {
+  width: 100%;
+}
+form#searchform div {
+  height: 50px;
+  border-radius: 50px;
+  padding: 5px 10px;
+  background-color: white;
+}
+form#searchform div input {
+  height: 100%;
+  border: 0;
+  outline: none;
+}
+form#searchform div input[type=search]::-webkit-search-decoration,
+form#searchform div input[type=search]::-webkit-search-cancel-button,
+form#searchform div input[type=search]::-webkit-search-results-button,
+form#searchform div input[type=search]::-webkit-search-results-decoration {
+  display: none;
+}
+form#searchform div button {
+  background-color: transparent;
+}/*# sourceMappingURL=styles.css.map */

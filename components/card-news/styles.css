@@ -1,0 +1,27 @@
+.card-news {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.card-news img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  transition-duration: 500ms;
+}
+.card-news #info .card-info {
+  height: 100px;
+}
+
+.card-news:hover {
+  cursor: pointer;
+}
+.card-news:hover img {
+  transform: scale(1.1);
+  transition-duration: 500ms;
+}/*# sourceMappingURL=styles.css.map */

@@ -3,7 +3,7 @@
 <main>
     <section class="bg-production" id="search-field">
         <div class="container  d-flex flex-column align-items-center justify-content-center">
-            <?php includeFile('components/search-input.php', array(
+            <?php includeFile('components/search-input/index.php', array(
                 'search_page' => 'producoes'
             ))?>
 
@@ -58,7 +58,7 @@
                 while ( $query -> have_posts()) : $query-> the_post();  
             ?>
                 <div class="col-12 col-lg-4">
-                    <?php includeFile('components/card-production.php', array(
+                    <?php includeFile('components/card-production/index.php', array(
                         'image' =>  get_the_post_thumbnail_url(),
                         'category' => get_the_category( $id )[0]->name ,
                         'title' => get_the_title(),

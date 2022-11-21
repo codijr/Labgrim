@@ -1,0 +1,27 @@
+.card-schedule {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.card-schedule img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  transition-duration: 500ms;
+}
+.card-schedule #info .card-info {
+  height: 90px;
+}
+
+.card-schedule:hover {
+  cursor: pointer;
+}
+.card-schedule:hover img.thumb {
+  transform: scale(1.1);
+  transition-duration: 500ms;
+}/*# sourceMappingURL=styles.css.map */
