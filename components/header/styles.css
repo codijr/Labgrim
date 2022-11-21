@@ -16,6 +16,10 @@ header#mobile-header {
 header#mobile-header nav {
   background-color: var(--background-white-color);
 }
+header#mobile-header nav #translate .translate-wrapper .switcher .selected {
+  background-color: var(--background-white-color) !important;
+  background: none !important;
+}
 header#mobile-header nav .container {
   height: 10vh;
 }
@@ -99,6 +103,34 @@ header#desktop-header {
   top: 0;
   left: 0;
   z-index: 2;
+}
+header#desktop-header nav #translate .translate-wrapper .switcher {
+  border: 1px solid black;
+  border-radius: 5px;
+}
+header#desktop-header nav #translate .translate-wrapper .switcher .selected {
+  width: 100%;
+  background-color: var(--background-white-color);
+  background: none;
+}
+header#desktop-header nav #translate .translate-wrapper .switcher .selected a {
+  border: none;
+  color: var(--text-black-color);
+  font-family: "Bariol Bold";
+  font-weight: 700;
+}
+header#desktop-header nav #translate .translate-wrapper .switcher .selected a:after {
+  color: var(--text-black-color);
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 285 285'><path d='M282 76.5l-14.2-14.3a9 9 0 0 0-13.1 0L142.5 174.4 30.3 62.2a9 9 0 0 0-13.2 0L3 76.5a9 9 0 0 0 0 13.1l133 133a9 9 0 0 0 13.1 0l133-133a9 9 0 0 0 0-13z' style='fill:%23000'/></svg>");
+}
+header#desktop-header nav #translate .translate-wrapper .switcher .option {
+  border: 0;
+}
+header#desktop-header nav #translate .translate-wrapper .switcher .option a {
+  border: none;
+  color: var(--text-black-color);
+  font-family: "Bariol Bold";
+  font-weight: 700;
 }
 header#desktop-header nav ul.navbar-nav li:not(.active):hover {
   background-color: rgba(201, 201, 201, 0.178);

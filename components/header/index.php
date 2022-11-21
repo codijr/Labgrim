@@ -57,23 +57,11 @@
                                 </li>
                             </ul>
 
-                            <select class="selectpicker px-4 w-100 shadow-none border-none">
-                                <option class="w-100" data-content="
-                                    <div class='d-flex'>
-                                        <img class='me-2' src='<?php echo get_template_directory_uri(); ?>/assets/icons/brazilian.png'> 
-                                        <h6>Português</h6>
-                                    </div>"
-                                >
-                                </option>
-
-                                <option class="w-100" data-content="
-                                    <div class='d-flex'>
-                                        <img class='me-2' src='<?php echo get_template_directory_uri(); ?>/assets/icons/english.png'> 
-                                        <h6>Inglês</h6>
-                                    </div>"
-                                >
-                                </option>
-                            </select>
+                            <div class="d-flex justify-content-center" id="translate">
+                                <div class="translate-wrapper w-75">
+                                    <?php echo do_shortcode('[gtranslate]'); ?>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -96,8 +84,8 @@
                     <img class="w-100 my-5 px-4" src="<?php echo get_template_directory_uri(); ?>/assets/icons/logo.svg" alt="Labgrim logo">
                 </a>
 
-                <div class="pb-5 d-flex flex-column justify-content-between align-items-start h-75" >
-                    <ul class="navbar-nav w-100">
+                <div class="pb-5 d-flex flex-column justify-content-between align-items-start h-75"  id="nav-links-menu">
+                    <ul class="navbar-nav">
                         <li class="nav-item ps-4 py-2 <?php if(is_page('noticias') || is_singular('noticia')) echo 'bg-news active'; ?>">
                             <a class="nav-link" href="<?php echo get_home_url(); ?>/index.php/noticias/"><h4>NOTÍCIAS</h4></a>
                         </li>
@@ -119,23 +107,12 @@
                         </li>
                     </ul>
 
-                    <select class="selectpicker px-4 w-100 shadow-none border-none">
-                        <option class="w-100" data-content="
-                            <div class='d-flex'>
-                                <img class='me-2' src='<?php echo get_template_directory_uri(); ?>/assets/icons/brazilian.png'> 
-                                <h6>Português</h6>
-                            </div>"
-                        >
-                        </option>
-
-                        <option class="w-100" data-content="
-                            <div class='d-flex'>
-                                <img class='me-2' src='<?php echo get_template_directory_uri(); ?>/assets/icons/english.png'> 
-                                <h6>Inglês</h6>
-                            </div>"
-                        >
-                        </option>
-                    </select>
+                    <div class="d-flex justify-content-center pe-4 w-100" id="translate">
+                        <div class="translate-wrapper w-50">
+                            <?php echo do_shortcode('[gtranslate]'); ?>
+                        </div>
+                    </div>
+                    
                 </div>
             </nav>
         </header>
