@@ -13,9 +13,12 @@
         transition-duration: 500ms;
     }
 
+
+
     #info {
         .card-info {
-            height: 100px;
+            height: min-content;
+            min-height: fit-content;
         }
     }
 }

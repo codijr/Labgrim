@@ -15,7 +15,9 @@
   transition-duration: 500ms;
 }
 .card-schedule #info .card-info {
-  height: 90px;
+  min-height: -webkit-max-content;
+  min-height: -moz-max-content;
+  min-height: max-content;
 }
 
 .card-schedule:hover {

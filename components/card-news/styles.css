@@ -15,7 +15,12 @@
   transition-duration: 500ms;
 }
 .card-news #info .card-info {
-  height: 100px;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
 }
 
 .card-news:hover {

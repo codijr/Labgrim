@@ -97,7 +97,6 @@ main #other-news #background a:hover h5 {
 }
 main #content-home {
   position: relative;
-  top: -40px;
 }
 main #content-home section #list-production .card-production {
   height: 450px;

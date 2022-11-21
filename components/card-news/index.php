@@ -3,7 +3,7 @@
 </style>
 
 <a href="<?php echo $url ?>">
-    <div class="card-news w-100 position-relative">
+    <div class="card-news w-100 position-relative shadow-sm">
         <img src="<?php echo $image ?>">
 
         <div class="position-absolute bottom-0 w-100" id="info">

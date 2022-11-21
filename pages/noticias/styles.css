@@ -1,7 +1,5 @@
 main #search-field {
-  padding-top: 40px;
-  padding-bottom: 120px;
-  background-image: url("../icons/background-pattern.svg");
+  background-image: url("../../assets/icons/background-pattern.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -10,12 +8,11 @@ main #search-field form#searchform div input:focus {
 }
 main #list-news {
   position: relative;
-  top: -60px;
 }
-main nav.pagination .pagination-wrapper {
+main #list-news nav.pagination .pagination-wrapper {
   width: 120px;
 }
-main nav.pagination .pagination-wrapper span, main nav.pagination .pagination-wrapper a {
+main #list-news nav.pagination .pagination-wrapper span, main #list-news nav.pagination .pagination-wrapper a {
   width: 30px;
   height: 30px;
   display: flex;
@@ -25,10 +22,10 @@ main nav.pagination .pagination-wrapper span, main nav.pagination .pagination-wr
   background-color: #D9D9D9;
   color: var(--text-white-color);
 }
-main nav.pagination .pagination-wrapper span {
+main #list-news nav.pagination .pagination-wrapper span {
   background-color: var(--news-color);
 }
-main nav.pagination .pagination-wrapper a.next, main nav.pagination .pagination-wrapper a.prev {
+main #list-news nav.pagination .pagination-wrapper a.next, main #list-news nav.pagination .pagination-wrapper a.prev {
   background-color: transparent;
   color: var(--news-color);
 }

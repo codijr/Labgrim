@@ -1,7 +1,5 @@
 main #search-field {
-  padding-top: 40px;
-  padding-bottom: 120px;
-  background-image: url("../icons/background-pattern.svg");
+  background-image: url("../../assets/icons/background-pattern.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -28,15 +26,14 @@ main #search-field #filters .selectpicker:focus, main #search-field #filters .se
 }
 main #list-productions {
   position: relative;
-  top: -60px;
 }
 main #list-productions .card-production {
   height: 300px;
 }
-main nav.pagination .pagination-wrapper {
+main #list-productions nav.pagination .pagination-wrapper {
   width: 120px;
 }
-main nav.pagination .pagination-wrapper span, main nav.pagination .pagination-wrapper a {
+main #list-productions nav.pagination .pagination-wrapper span, main #list-productions nav.pagination .pagination-wrapper a {
   width: 30px;
   height: 30px;
   display: flex;
@@ -46,10 +43,10 @@ main nav.pagination .pagination-wrapper span, main nav.pagination .pagination-wr
   background-color: #D9D9D9;
   color: var(--text-white-color);
 }
-main nav.pagination .pagination-wrapper span {
+main #list-productions nav.pagination .pagination-wrapper span {
   background-color: var(--production-color);
 }
-main nav.pagination .pagination-wrapper a.next, main nav.pagination .pagination-wrapper a.prev {
+main #list-productions nav.pagination .pagination-wrapper a.next, main #list-productions nav.pagination .pagination-wrapper a.prev {
   background-color: transparent;
   color: var(--production-color);
 }

@@ -14,8 +14,12 @@
     }
 
     #info {
+        #tag {
+            width: fit-content;
+        }
+
         .card-info {
-            height: 100px;
+            min-height: max-content;
         }
     }
 }
