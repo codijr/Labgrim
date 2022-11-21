@@ -59,7 +59,7 @@
                 </div>
 
                 <div class="w-100 d-flex justify-content-center pt-4">
-                    <a href="<?php echo get_home_url(); ?>/index.php/noticias">
+                    <a href="<?php echo get_home_url(); ?>/index.php/noticias/">
                         <button class="bg-news px-4 py-2">
                             <p class="tag text-white">VER MAIS</p>
                         </button>
@@ -93,7 +93,7 @@
                 </div>
 
                 <div class="d-flex justify-content-center mb-5">
-                    <a href="<?php echo get_home_url(); ?>/index.php/producoes">
+                    <a href="<?php echo get_home_url(); ?>/index.php/producoes/">
                         <button class="bg-production px-4 py-2">
                             <p class="tag text-white">VER MAIS</p>
                         </button>
@@ -130,7 +130,7 @@
                     <?php endwhile; ?>
                 </div>
                 
-                <a href="<?php echo get_home_url(); ?>/index.php/agenda">
+                <a href="<?php echo get_home_url(); ?>/index.php/agenda/">
                     <button class="bg-schedule px-4 py-2">
                         <p class="tag text-white">VER MAIS</p>
                     </button>
