@@ -14,7 +14,7 @@
 .card-senior-researcher #content {
   position: relative;
   width: 95%;
-  left: 2.5%;
+  left: -2.5%;
 }
 .card-senior-researcher #content #thumb {
   width: 50%;

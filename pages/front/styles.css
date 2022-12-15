@@ -7,8 +7,6 @@ main #banner img {
   position: relative;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
   transition-duration: 500ms;
 }
 main #banner .filter {

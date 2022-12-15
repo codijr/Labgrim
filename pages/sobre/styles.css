@@ -47,7 +47,7 @@ main #whatIs #visual .d-flex .w-100 #labgrim-action {
   right: 0;
 }
 main #howStarted {
-  background-image: url("../icons/background-pattern.svg");
+  background-image: url("../../assets/icons/background-pattern.svg");
 }
 main #howStarted .timeline {
   margin: 0 auto;
