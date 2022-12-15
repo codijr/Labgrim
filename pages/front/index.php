@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php get_header(); wp_reset_postdata(); ?>
 
 <main>
     <?php 
@@ -6,13 +6,13 @@
             'post_type' => 'noticia',
             'posts_per_page' => 1
         );
-        $query = new WP_Query( $args );
+        $queryp = new WP_Query( $args );
     ?>
     
     <section class="position-relative w-100" id="banner">
         <a href="<?php echo get_permalink(); ?>">
             <?php 
-                while ( $query -> have_posts()) : $query-> the_post();
+                while ( $queryp -> have_posts()) : $queryp-> the_post();
             ?>
             <img src="<?php echo get_the_post_thumbnail_url() ?>" />
             <div class="filter"></div>
@@ -53,7 +53,7 @@
                             <div class="swiper-slide text-center px-4">
                                 <a href="<?php echo get_permalink(); ?>"><h5><?php echo mb_strimwidth(get_the_title(), 0, 80, "..."); ?></h5></a>
                             </div>
-                        <?php endwhile; ?>
+                        <?php endwhile; wp_reset_postdata(); ?>
                     </div>
                     <div class="swiper-pagination mb-5"></div>
                 </div>

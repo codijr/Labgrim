@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php get_header(); wp_reset_postdata(); ?>
 
 <main>
     <section class="container bg-news py-5" id="title">

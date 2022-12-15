@@ -30,7 +30,7 @@
 
         <h3 class="mb-3 text-members">Pesquisadores</h3>
 
-        <div class="mb-5 w-100 gy-4 row" id="list-researcher">
+        <div class="mb-5 w-100 g-2 row" id="list-researcher">
             <?php 
                 $args = array(
                     'post_type' => 'integrante',
@@ -39,7 +39,7 @@
                 $query = new WP_Query( $args );
                 while ( $query -> have_posts()) : $query-> the_post();
             ?>      
-                    <div class="col-12 col-xl-3">
+                    <div class="col-6 col-xl-3">
                         <?php includeFile('components/card-researcher/index.php', array(
                         'name' => get_the_title(),
                         'image' => get_the_post_thumbnail_url(),
@@ -62,7 +62,7 @@
         </div>
 
         <div class="mb-5" id="list-researcher">
-            <div class="row gx-3 gy-3 mb-3">
+            <div class="row g-2 mb-3 w-100">
                 <?php 
                     $args = array(
                         'post_type' => 'integrante',
@@ -71,7 +71,7 @@
                     $query = new WP_Query( $args );
                     while ( $query -> have_posts()) : $query-> the_post();
                 ?>
-                    <div class="col-12 col-lg-3">
+                    <div class="col-6 col-lg-3">
                         <?php includeFile('components/card-ex-researcher/index.php', array(
                             'name' => get_the_title(),
                             'email' => get_field('email'),
