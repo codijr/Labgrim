@@ -129,7 +129,7 @@
                     <?php endwhile; wp_reset_postdata(); ?>
                 </div>
                 
-                <a href="<?php echo get_home_url(); ?>/index.php/agenda/">
+                <a href="<?php echo get_home_url(); ?>/index.php/agenda/" class="d-flex justify-content-center justify-content-lg-start">
                     <button class="bg-schedule px-4 py-2">
                         <p class="tag text-white">VER MAIS</p>
                     </button>
