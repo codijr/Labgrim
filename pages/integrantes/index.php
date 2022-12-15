@@ -25,7 +25,7 @@
                     'cargo' => get_field('cargo'),
                     'lattes' => get_field('lattes')
                 )) ?>
-            <?php endwhile; ?>
+            <?php endwhile; wp_reset_postdata(); ?>
         </div>
 
         <h3 class="mb-3 text-members">Pesquisadores</h3>
@@ -77,7 +77,7 @@
                             'email' => get_field('email'),
                         )) ?>
                     </div>
-                <?php endwhile; ?>
+                <?php endwhile; wp_reset_postdata(); ?>
             </div>
         </div>
     </section>

@@ -66,7 +66,7 @@
                         'url' => get_the_permalink()
                     )) ?>
                 </div>
-            <?php endwhile; ?>
+            <?php endwhile; wp_reset_postdata(); ?>
 
             <nav class="pagination d-flex justify-content-center w-100">
                 <div class="pagination-wrapper d-flex justify-content-around">

@@ -6,33 +6,32 @@
             'post_type' => 'noticia',
             'posts_per_page' => 1
         );
-        $queryp = new WP_Query( $args );
+        $query = new WP_Query( $args );
     ?>
     
     <section class="position-relative w-100" id="banner">
-        <a href="<?php echo get_permalink(); ?>">
-            <?php 
-                while ( $queryp -> have_posts()) : $queryp-> the_post();
+        <?php 
+                while ( $query -> have_posts()) : $query-> the_post();
             ?>
-            <img src="<?php echo get_the_post_thumbnail_url() ?>" />
-            <div class="filter"></div>
+            <a href="<?php echo get_the_permalink(); ?>">
+                <img src="<?php echo get_the_post_thumbnail_url() ?>" />
+                <div class="filter"></div>
 
-            <div class="position-absolute d-flex" id="pattern-group">
-                <img class="pattern" id="x-1" src="<?php echo get_template_directory_uri(); ?>/assets/icons/x-pattern.svg" />
-                <img class="pattern" id="triangle-1" src="<?php echo get_template_directory_uri(); ?>/assets/icons/triangle-pattern.svg" />
-                <img class="pattern" id="x-2" src="<?php echo get_template_directory_uri(); ?>/assets/icons/x-pattern.svg" />
-                <img class="pattern" id="circle-1" src="<?php echo get_template_directory_uri(); ?>/assets/icons/circle-pattern.svg" />
-                <img class="pattern" id="x-3" src="<?php echo get_template_directory_uri(); ?>/assets/icons/x-pattern.svg" />
-            </div>
-
-            <div class="position-absolute w-100 d-flex flex-column align-items-center" id="info">
-                <div class="container w-100 d-flex flex-column align-items-center">
-                    <h1 class="text-center text-white"><?php echo mb_strimwidth(get_the_title(), 0, 80, "..."); ?></h1>
+                <div class="position-absolute d-flex" id="pattern-group">
+                    <img class="pattern" id="x-1" src="<?php echo get_template_directory_uri(); ?>/assets/icons/x-pattern.svg" />
+                    <img class="pattern" id="triangle-1" src="<?php echo get_template_directory_uri(); ?>/assets/icons/triangle-pattern.svg" />
+                    <img class="pattern" id="x-2" src="<?php echo get_template_directory_uri(); ?>/assets/icons/x-pattern.svg" />
+                    <img class="pattern" id="circle-1" src="<?php echo get_template_directory_uri(); ?>/assets/icons/circle-pattern.svg" />
+                    <img class="pattern" id="x-3" src="<?php echo get_template_directory_uri(); ?>/assets/icons/x-pattern.svg" />
                 </div>
-            </div>
-        <?php endwhile; ?>
-        </a>
-        <?php wp_reset_postdata(); ?>
+
+                <div class="position-absolute w-100 d-flex flex-column align-items-center" id="info">
+                    <div class="container w-100 d-flex flex-column align-items-center">
+                        <h1 class="text-center text-white"><?php echo mb_strimwidth(get_the_title(), 0, 80, "..."); ?></h1>
+                    </div>
+                </div>
+            </a>
+        <?php endwhile; wp_reset_postdata(); ?>
     </section>
     
 
@@ -89,7 +88,7 @@
                             'subtitle' => get_the_excerpt(),
                             'url' => get_the_permalink()
                         )) ?>
-                    <?php endwhile; ?>
+                    <?php endwhile; wp_reset_postdata(); ?>
                 </div>
 
                 <div class="d-flex justify-content-center mb-5">
@@ -127,7 +126,7 @@
                                 echo '<hr/>';
                             }
                         ?>
-                    <?php endwhile; ?>
+                    <?php endwhile; wp_reset_postdata(); ?>
                 </div>
                 
                 <a href="<?php echo get_home_url(); ?>/index.php/agenda/">
