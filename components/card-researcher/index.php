@@ -15,6 +15,17 @@
             </div>
 
             <p class="body-2 text-gray mb-1 text-center"><?php echo $email ?></p>
+
+            <div class="w-100 d-flex justify-content-center mb-1">
+                <?php 
+                    if($lattes) {
+                        includeFile('components/button-pdf/index.php', array(
+                            'name' => 'Lattes',
+                            'url' => $lattes,
+                        ));
+                    }
+                ?>
+            </div>
         </div>
     </div>
 </div>

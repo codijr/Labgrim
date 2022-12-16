@@ -5,3 +5,25 @@ main {
         background-position: center;
     }
 }
+
+.bootstrap-select>.dropdown-toggle.bs-placeholder, .bootstrap-select>.dropdown-toggle.bs-placeholder:active, .bootstrap-select>.dropdown-toggle.bs-placeholder:focus, .bootstrap-select>.dropdown-toggle.bs-placeholder:hover {
+    color: #000;
+    outline: none;
+}
+
+.bootstrap-select>.dropdown-toggle {
+    background-color: white;
+    border-radius: 50px;
+}
+
+.bootstrap-select .dropdown-toggle:focus, .bootstrap-select>select.mobile-device:focus+.dropdown-toggle {
+    outline: none !important;
+    outline-offset: 0;
+}
+
+
+.btn-check:focus+.btn-light, .btn-light:focus {
+    border: 0;
+    box-shadow: none;
+    outline: none;
+}

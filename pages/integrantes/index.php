@@ -44,6 +44,7 @@
                         'name' => get_the_title(),
                         'image' => get_the_post_thumbnail_url(),
                         'email' => get_field('email'),
+                        'lattes' => get_field('lattes')
                     )) ?>
                     </div>
             <?php endwhile; wp_reset_postdata(); ?>
@@ -51,36 +52,63 @@
 
         <div class="mb-3 d-flex justify-content-between">
             <h3 class="text-members">Ex-integrantes</h3>
-
-            <select class="w-25 selectpicker" name="" id="">
-                <option value="">ANO</option>
-                <option value="">2022</option>
-                <option value="">2021</option>
-                <option value="">2020</option>
-                <option value="">2019</option>
-            </select>
+            
+            <?php 
+                if($terms = get_terms(
+                    array(
+                        'taxonomy' => 'ano_saida',
+                    )
+                )) :
+                echo '<select class="w-25 selectpicker" name="" id="">';
+                echo '<option value="">ANO</option>';
+                foreach($terms as $term) :
+                    echo '<option value="' . $term->slug . '">' . $term->name . '</option>';
+                endforeach;
+                echo '</select>';
+                endif;
+            ?>
         </div>
 
         <div class="mb-5" id="list-researcher">
             <div class="row g-2 mb-3 w-100">
-                <?php 
+                
+                    <?php 
                     $args = array(
                         'post_type' => 'integrante',
                         'meta_value' => 'ex_pesquisador'
                     );
                     $query = new WP_Query( $args );
-                    while ( $query -> have_posts()) : $query-> the_post();
-                ?>
-                    <div class="col-6 col-lg-3">
-                        <?php includeFile('components/card-ex-researcher/index.php', array(
+                    $anos = get_terms(array(
+                        'taxonomy' => 'ano_saida',
+                        'hide_empty' => false
+                    ));
+                    foreach($anos as $ano) : $query -> the_post();
+                        echo '<div class="ex-researcher-col col-6 col-lg-3" ano_saida="' . $ano -> slug . '">';
+                        includeFile('components/card-ex-researcher/index.php', array(
                             'name' => get_the_title(),
-                            'email' => get_field('email'),
-                        )) ?>
-                    </div>
-                <?php endwhile; wp_reset_postdata(); ?>
+                            'lattes' => get_field('lattes'),
+                        ));
+                        echo '</div>';
+                    endforeach; wp_reset_postdata(); ?>
+                
             </div>
         </div>
     </section>
 </main>
+
+<script>
+    $('.selectpicker').change(function (e) { 
+        e.preventDefault();
+        var ano = $(this).val();
+        var cards = $('.ex-researcher-col');
+        cards.each(function (index, element) {
+            if($(element).attr('ano_saida') == ano) {
+                $(element).show();
+            } else {
+                $(element).attr('style', 'display: none !important');
+            }
+        });
+    });
+</script>
 
 <?php get_footer(); ?>

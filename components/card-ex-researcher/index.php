@@ -5,5 +5,14 @@
 <div class="card-ex-researcher w-100 d-flex flex-column justify-content-center bg-white py-2 px-4">
     <h4 class="text-members text-center mb-1"><?php echo $name ?></h4>
 
-    <p class="body-2 text-gray mb-1 text-center"><?php echo $email ?></p>
+    <div class="w-100 d-flex justify-content-center">
+        <?php 
+            if($lattes) {
+                includeFile('components/button-pdf/index.php', array(
+                    'name' => 'Lattes',
+                    'url' => $lattes,
+                ));
+            }
+        ?>
+    </div>
 </div>

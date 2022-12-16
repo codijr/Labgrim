@@ -11,8 +11,9 @@
         </div>
         <div class="mx-4 px-2 w-100" id="info">
             <div class="d-flex mb-1 flex-column flex-lg-row">
-                <h3 class="w-100 text-members mb-2 mb-lg-0 text-center text-lg-start"><?php echo $name ?></h3>
-                <div class="w-100 w-lg-0 d-flex mb-2 mb-lg-0 justify-content-center justify-content-lg-start">
+                <div class="w-100 w-lg-0 d-flex mb-2 mb-lg-0 justify-content-center justify-content-lg-start align-items-center">
+                    <h3 class="me-3 text-members mb-2 mb-lg-0 text-center text-lg-start"><?php echo $name ?></h3>
+
                     <?php 
                         if($lattes) {
                             includeFile('components/button-pdf/index.php', array(
