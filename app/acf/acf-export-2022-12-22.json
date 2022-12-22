@@ -1,4 +1,4 @@
-	[
+[
     {
         "key": "group_62f42a68afac9",
         "title": "Agenda de Atividade",
@@ -7,6 +7,7 @@
                 "key": "field_62f42a7080ab7",
                 "label": "Hora da Atividade",
                 "name": "hora_da_atividade",
+                "aria-label": "",
                 "type": "time_picker",
                 "instructions": "",
                 "required": 1,
@@ -23,6 +24,7 @@
                 "key": "field_62f433ecbb5b5",
                 "label": "Data da atividade",
                 "name": "data_da_atividade",
+                "aria-label": "",
                 "type": "date_picker",
                 "instructions": "",
                 "required": 1,
@@ -64,6 +66,7 @@
                 "key": "field_6316c1aff94df",
                 "label": "Destacar na Home",
                 "name": "destacar_na_home",
+                "aria-label": "",
                 "type": "true_false",
                 "instructions": "",
                 "required": 0,
@@ -121,6 +124,7 @@
                 "key": "field_62f44eeab4da7",
                 "label": "Email",
                 "name": "email",
+                "aria-label": "",
                 "type": "email",
                 "instructions": "",
                 "required": 1,
@@ -139,6 +143,7 @@
                 "key": "field_62f44fd716c56",
                 "label": "Cargo",
                 "name": "cargo",
+                "aria-label": "",
                 "type": "select",
                 "instructions": "",
                 "required": 1,
@@ -165,7 +170,8 @@
                 "key": "field_62f451c005e2c",
                 "label": "Lattes",
                 "name": "lattes",
-                "type": "file",
+                "aria-label": "",
+                "type": "url",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -174,11 +180,8 @@
                     "class": "",
                     "id": ""
                 },
-                "return_format": "url",
-                "library": "all",
-                "min_size": "",
-                "max_size": "",
-                "mime_types": ".pdf"
+                "default_value": "",
+                "placeholder": ""
             }
         ],
         "location": [
@@ -208,6 +211,7 @@
                 "key": "field_630fdec569bfb",
                 "label": "pdf",
                 "name": "pdf",
+                "aria-label": "",
                 "type": "file",
                 "instructions": "",
                 "required": 0,
@@ -227,6 +231,7 @@
                 "key": "field_630fdf0369bfc",
                 "label": "",
                 "name": "",
+                "aria-label": "",
                 "type": "text",
                 "instructions": "",
                 "required": 0,
