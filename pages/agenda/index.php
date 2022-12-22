@@ -2,7 +2,7 @@
 
 <main>
     <section class="bg-schedule container py-5" id="search-field">
-        <h1 class="text-white mb-3">Agenda de Atividades</h1>
+        <h1 class="text-white mb-5">Agenda de Atividades</h1>
         <div class="d-flex flex-column align-items-center justify-content-center">
             <?php includeFile('components/search-input/index.php', array(
                 'search_page' => 'agendadeatividades'

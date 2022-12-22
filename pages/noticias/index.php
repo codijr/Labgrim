@@ -2,7 +2,7 @@
 
 <main>
     <section class="bg-news container py-5" id="search-field">
-        <h1 class="text-white pb-3">Notícias</h1>
+        <h1 class="text-white pb-5">Notícias</h1>
         <div class="d-flex justify-content-center">
             <?php includeFile('components/search-input/index.php', array(
                 'search_page' => 'noticias'
