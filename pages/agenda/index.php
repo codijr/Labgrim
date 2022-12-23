@@ -53,7 +53,8 @@
             <?php 
                 $args = array(
                     'post_type' => 'agendadeatividades',
-                    'posts_per_page' => 9
+                    'posts_per_page' => 9,
+                    'paged' => max(1, get_query_var('paged'))
                 );
                 $query = new WP_Query( $args );
                 while ( $query -> have_posts()) : $query-> the_post();
@@ -67,15 +68,15 @@
                         'url' => get_the_permalink()
                     )) ?>
                 </div>
-            <?php endwhile; wp_reset_postdata(); ?>
+            <?php endwhile; ?>
         </div>
 
         <nav class="pagination d-flex justify-content-center w-100">
             <div class="pagination-wrapper d-flex justify-content-around">
                 <?php 
-                    $big = 999999999;
+                    $total_pages = $query->max_num_pages;
                     $pagination_args = array(
-                        'base' => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
+                        'base' => get_pagenum_link(1) . '%_%',
                         'format' => '?paged=%#%',
                         'current' => max(1, get_query_var('paged')),
                         'total' => $query->max_num_pages,
@@ -83,6 +84,7 @@
                         'next_text' => '>'
                     );
                     echo paginate_links( $pagination_args );
+                    wp_reset_postdata(); 
                 ?>
             </div>
         </nav>
