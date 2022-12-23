@@ -76,7 +76,8 @@
                 <div class="mb-3" id="list-production">
                     <?php 
                         $args = array(
-                            'post_type' => 'producao'
+                            'post_type' => 'producao',
+                            'posts_per_page' => 4,
                         );
                         $query = new WP_Query( $args );
                         while ( $query -> have_posts()) : $query-> the_post();
@@ -107,7 +108,8 @@
                     <?php 
                         $count = 1;
                         $args = array(
-                            'post_type' => 'agendadeatividades'
+                            'post_type' => 'agendadeatividades',
+                            'posts_per_page' => 4,
                         );
                         $query = new WP_Query( $args );
                         while ( $query -> have_posts()) : $query-> the_post();
