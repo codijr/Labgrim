@@ -20,7 +20,7 @@
                 <?php includeFile('components/card-senior-researcher/index.php', array(
                     'name' => get_the_title(),
                     'description' => get_the_content(),
-                    'image' => get_the_post_thumbnail_url(),
+                    'image' => has_post_thumbnail() ? get_the_post_thumbnail_url() : get_template_directory_uri() . '/assets/icons/profile-template.png',
                     'email' => get_field('email'),
                     'cargo' => get_field('cargo'),
                     'lattes' => get_field('lattes')
@@ -42,7 +42,7 @@
                     <div class="col-6 col-xl-3">
                         <?php includeFile('components/card-researcher/index.php', array(
                         'name' => get_the_title(),
-                        'image' => get_the_post_thumbnail_url(),
+                        'image' => has_post_thumbnail() ? get_the_post_thumbnail_url() : get_template_directory_uri() . '/assets/icons/profile-template.png',
                         'email' => get_field('email'),
                         'lattes' => get_field('lattes')
                     )) ?>
