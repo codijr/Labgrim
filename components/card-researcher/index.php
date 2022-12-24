@@ -5,7 +5,7 @@
 <div class="w-100 d-flex flex-column justify-content-center bg-white" id="card-researcher">
     <div class="bg-members" id="background-detail"></div>
 
-    <div class="d-flex flex-column px-3" id="content">
+    <div class="d-flex flex-column px-1" id="content">
         <div class="d-flex justify-content-center align-items-center mb-2" id="thumb">
             <img src="<?php echo $image ?>">
         </div>

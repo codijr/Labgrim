@@ -1,7 +1,10 @@
 #card-researcher {
   border-radius: 10px;
   position: relative;
-  height: 210px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  min-height: 210px;
 }
 #card-researcher #background-detail {
   width: 100%;
