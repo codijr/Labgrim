@@ -20,7 +20,7 @@
                 <?php includeFile('components/card-senior-researcher/index.php', array(
                     'name' => get_the_title(),
                     'description' => get_the_content(),
-                    'image' => get_the_post_thumbnail_url(),
+                    'image' => has_post_thumbnail() ? get_the_post_thumbnail_url() : get_template_directory_uri() . '/assets/icons/profile-template.png',
                     'email' => get_field('email'),
                     'cargo' => get_field('cargo'),
                     'lattes' => get_field('lattes')
@@ -42,7 +42,7 @@
                     <div class="col-6 col-xl-3">
                         <?php includeFile('components/card-researcher/index.php', array(
                         'name' => get_the_title(),
-                        'image' => get_the_post_thumbnail_url(),
+                        'image' => has_post_thumbnail() ? get_the_post_thumbnail_url() : get_template_directory_uri() . '/assets/icons/profile-template.png',
                         'email' => get_field('email'),
                         'lattes' => get_field('lattes')
                     )) ?>
@@ -71,25 +71,24 @@
 
         <div class="mb-5" id="list-researcher">
             <div class="row g-2 mb-3 w-100">
-                
                     <?php 
                     $args = array(
                         'post_type' => 'integrante',
                         'meta_value' => 'ex_pesquisador'
                     );
                     $query = new WP_Query( $args );
-                    $anos = get_terms(array(
-                        'taxonomy' => 'ano_saida',
-                        'hide_empty' => false
-                    ));
-                    foreach($anos as $ano) : $query -> the_post();
-                        echo '<div class="ex-researcher-col col-6 col-lg-3" ano_saida="' . $ano -> slug . '">';
+
+                    if(have_posts()) : while ( $query -> have_posts()) : $query-> the_post();
+                    $terms = wp_get_post_terms( $post->ID, 'ano_saida' );
+                    $ano = $terms[0]->name;
+                    echo '<div class="ex-researcher-col col-6 col-lg-3" ano_saida="' . $ano .'">';
                         includeFile('components/card-ex-researcher/index.php', array(
                             'name' => get_the_title(),
                             'lattes' => get_field('lattes'),
                         ));
                         echo '</div>';
-                    endforeach; wp_reset_postdata(); ?>
+                        
+                    endwhile; endif; wp_reset_postdata(); ?>
                 
             </div>
         </div>

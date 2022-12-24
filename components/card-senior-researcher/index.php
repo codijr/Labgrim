@@ -5,9 +5,9 @@
 <div class="card-senior-researcher w-100 d-flex bg-white mb-3">
     <div class="bg-members" id="background-detail"></div>
 
-    <div class="d-flex flex-column flex-lg-row py-3" id="content">
+    <div class="d-flex flex-column flex-lg-row py-3 align-items-center" id="content">
         <div class="d-flex justify-content-center align-items-center mb-2 mb-lg-0" id="thumb">
-            <img src="<?php echo $image ?>">
+            <img src="<?php echo $image;  ?>">
         </div>
         <div class="mx-4 px-2 w-100" id="info">
             <div class="d-flex mb-1 flex-column flex-lg-row">

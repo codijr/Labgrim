@@ -1,7 +1,10 @@
 #card-researcher {
   border-radius: 10px;
   position: relative;
-  height: 210px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  min-height: 240px;
 }
 #card-researcher #background-detail {
   width: 100%;
@@ -25,4 +28,5 @@
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
+  background-color: white;
 }/*# sourceMappingURL=styles.css.map */

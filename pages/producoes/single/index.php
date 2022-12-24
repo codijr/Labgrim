@@ -2,7 +2,7 @@
 
 <main>
     <section class="container bg-production py-5" id="title">
-        <h1 class="text-white"><?php the_category(', '); ?></h1>
+        <h1 class="text-white"><?php echo get_the_terms( $post->ID, 'tipo' )[0]->name; ?></h1>
     </section>
 
     <section class="container py-5">
