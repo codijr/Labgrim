@@ -21,6 +21,7 @@
         <hr/>
 
         <section class="post-content">
+            <img class="w-100 mb-4" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php echo get_the_title(); ?>">
             <?php the_content();?>
             <?php 
                 $pdf = get_field('pdf');
